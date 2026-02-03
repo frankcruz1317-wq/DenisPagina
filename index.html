@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenCut Lawn Care | Free Estimates</title>
+  <meta name="description" content="Professional lawn mowing, trimming, edging, cleanup, and mulching. Free estimates. Fast & reliable service." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span>📞 (267) 000-0000</span>
+        <span class="sep">•</span>
+        <span>✉️ greencut@example.com</span>
+      </div>
+      <a class="topbar__cta" href="#quote">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="home">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="GreenCut Lawn Care">
+        <div class="brand__logo">
+          <!-- Si no tenés logo, esto sirve como placeholder -->
+          <span>GC</span>
+        </div>
+        <div class="brand__text">
+          <strong>GreenCut</strong>
+          <span>Lawn Care</span>
+        </div>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">☰</button>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#reviews" class="nav__link">Reviews</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg" role="img" aria-label="Lawn care service"></div>
+    <div class="container hero__content">
+      <div class="hero__left">
+        <h1>Professional Lawn Care & Landscaping</h1>
+        <p>
+          Reliable, affordable, and clean work.
+          We keep your yard looking sharp all season. 🌿✂️
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#quote">Free Estimate</a>
+          <a class="btn btn--ghost" href="#services">View Services</a>
+        </div>
+
+        <div class="hero__badges">
+          <div class="badge">✅ Same-week service</div>
+          <div class="badge">✅ Residential & commercial</div>
+          <div class="badge">✅ Fair pricing</div>
+        </div>
+      </div>
+
+      <!-- Quote Form Card -->
+      <div class="card" id="quote">
+        <h2>Request a Quote</h2>
+        <p class="muted">Fill this out and we’ll get back to you fast.</p>
+
+        <form id="quoteForm">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+
+          <label>
+            Phone Number
+            <input type="tel" name="phone" placeholder="(###) ###-####" required />
+          </label>
+
+          <label>
+            Address
+            <input type="text" name="address" placeholder="Street, City" required />
+          </label>
+
+          <label>
+            Service Needed
+            <textarea name="service" rows="4" placeholder="Lawn mowing, trimming, cleanup, mulching..." required></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--full" type="submit">Submit</button>
+          <p class="form__note" id="formNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <h2>Services</h2>
+        <p class="muted">Everything you need to keep your property looking fresh.</p>
+      </div>
+
+      <div class="grid">
+        <article class="service">
+          <div class="service__icon">🌿</div>
+          <h3>Lawn Mowing</h3>
+          <p>Clean cuts, consistent schedule, and sharp lines.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+
+        <article class="service">
+          <div class="service__icon">✂️</div>
+          <h3>Trimming & Edging</h3>
+          <p>Edges that look like they were drawn with a ruler.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+
+        <article class="service">
+          <div class="service__icon">🍃</div>
+          <h3>Leaf Cleanup</h3>
+          <p>Seasonal cleanup, bagging, and hauling away.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+
+        <article class="service">
+          <div class="service__icon">🌱</div>
+          <h3>Mulching</h3>
+          <p>Fresh mulch install to make beds pop and protect plants.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+
+        <article class="service">
+          <div class="service__icon">🧼</div>
+          <h3>Yard Cleanup</h3>
+          <p>Branches, debris, overgrowth, and general yard reset.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+
+        <article class="service">
+          <div class="service__icon">❄️</div>
+          <h3>Snow Removal</h3>
+          <p>Driveways and walkways cleared quickly in winter.</p>
+          <a class="link" href="#contact">Learn more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--alt" id="about">
+    <div class="container split">
+      <div>
+        <h2>About Us</h2>
+        <p class="muted">
+          We’re a local team focused on quality work and good communication.
+          If we say we’re coming, we show up. Simple as that.
+        </p>
+        <ul class="checklist">
+          <li>Licensed & insured (if applies)</li>
+          <li>Free estimates</li>
+          <li>Respectful, clean, professional</li>
+        </ul>
+      </div>
+
+      <div class="aboutCard">
+        <h3>Service Area</h3>
+        <p class="muted">Southeast PA (edit this for your area)</p>
+        <div class="chips">
+          <span class="chip">Hatfield</span>
+          <span class="chip">Lansdale</span>
+          <span class="chip">Montgomery County</span>
+          <span class="chip">Bucks County</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head">
+        <h2>Customer Reviews</h2>
+        <p class="muted">Real words from real neighbors.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="review">
+          <p>“Came on time, my yard looked brand new. Great price.”</p>
+          <span class="review__name">– Mike R.</span>
+        </article>
+        <article class="review">
+          <p>“Edges were crisp, cleanup was spotless. 10/10.”</p>
+          <span class="review__name">– Sarah T.</span>
+        </article>
+        <article class="review">
+          <p>“Quick response and super professional. Highly recommend.”</p>
+          <span class="review__name">– David L.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--alt" id="contact">
+    <div class="container split">
+      <div>
+        <h2>Contact</h2>
+        <p class="muted">Call, text, or request a quote. We reply fast.</p>
+
+        <div class="contactList">
+          <div>📞 <strong>(267) 000-0000</strong></div>
+          <div>✉️ <strong>greencut@example.com</strong></div>
+          <div>🕒 <strong>Mon-Sat</strong> 7AM – 6PM</div>
+        </div>
+
+        <a class="btn btn--primary" href="#quote">Get a Free Estimate</a>
+      </div>
+
+      <div class="mapBox">
+        <p class="muted">
+          Optional: Here you can embed a Google Map later, or put “Service Area”.
+        </p>
+        <div class="mapFake">MAP / SERVICE AREA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> GreenCut Lawn Care. All rights reserved.</p>
+      <a class="link" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button (cambia el número) -->
+  <a class="whatsapp" href="https://wa.me/12670000000" target="_blank" rel="noopener">
+    💬 Text Us
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
