@@ -1,106 +1,311 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenCut Lawn Care | Presupuesto Gratis</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenCut | Cuidado del Césped</title>
+  <meta name="description" content="Corte de césped, edging, limpieza y mulch. Presupuesto gratis. Servicio rápido y confiable." />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
-<div class="topbar">
-  <div class="container">
-    <span>📞 (267) 000-0000</span>
-    <span>✉️ greencut@example.com</span>
-    <a href="#quote">Presupuesto gratis</a>
-  </div>
-</div>
-
-<header class="header">
-  <div class="container header-flex">
-    <h1 class="logo">GreenCut</h1>
-    <nav>
-      <a href="#home">Inicio</a>
-      <a href="#services">Servicios</a>
-      <a href="#about">Nosotros</a>
-      <a href="#reviews">Reseñas</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero" id="home">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <h2>Cuidado profesional del césped y landscaping</h2>
-    <p>Servicio confiable, rápido y a buen precio. Jardines limpios todo el año.</p>
-    <div class="hero-buttons">
-      <a class="btn primary" href="#quote">Cotización gratis</a>
-      <a class="btn ghost" href="#services">Ver servicios</a>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="topbar__left">
+        <span>📞 <a href="tel:+12670000000">(267) 000-0000</a></span>
+        <span class="dot">•</span>
+        <span>✉️ <a href="mailto:greencut@example.com">greencut@example.com</a></span>
+      </div>
+      <a class="pill" href="#quote">Presupuesto gratis</a>
     </div>
   </div>
-</section>
 
-<section class="quote" id="quote">
-  <div class="container">
-    <h2>Solicitar cotización</h2>
-    <form id="quoteForm">
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Teléfono" required>
-      <input type="text" placeholder="Dirección" required>
-      <textarea placeholder="Servicio requerido" required></textarea>
-      <button type="submit">Enviar</button>
-      <p id="formMsg"></p>
-    </form>
-  </div>
-</section>
+  <header class="header" id="home">
+    <div class="wrap header__inner">
+      <a class="brand" href="#home" aria-label="GreenCut">
+        <div class="brand__mark">GC</div>
+        <div class="brand__text">
+          <strong>GreenCut</strong>
+          <span>Cuidado del Césped</span>
+        </div>
+      </a>
 
-<section class="services" id="services">
-  <div class="container">
-    <h2>Servicios</h2>
-    <div class="services-grid">
-      <div class="service">🌿 Corte de césped</div>
-      <div class="service">✂️ Recorte y bordes</div>
-      <div class="service">🍃 Limpieza de hojas</div>
-      <div class="service">🌱 Mulch</div>
-      <div class="service">🧹 Limpieza general</div>
-      <div class="service">❄️ Remoción de nieve</div>
+      <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a class="nav__link" href="#services">Servicios</a>
+        <a class="nav__link" href="#work">Trabajos</a>
+        <a class="nav__link" href="#about">Nosotros</a>
+        <a class="nav__link" href="#contact">Contacto</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="about" id="about">
-  <div class="container">
-    <h2>Sobre nosotros</h2>
-    <p>Somos un negocio local comprometido con un trabajo limpio y puntual.</p>
-  </div>
-</section>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__left">
+        <div class="kicker">Servicio local • Rápido • Limpio</div>
+        <h1>Tu césped, como si lo peináramos con peine fino 🌿</h1>
+        <p class="lead">
+          Corte de césped, edging, limpieza y mulch. Agenda fácil y precios claros.
+          Presupuesto gratis en minutos.
+        </p>
 
-<section class="reviews" id="reviews">
-  <div class="container">
-    <h2>Reseñas</h2>
-    <div class="reviews-grid">
-      <div class="review">Excelente servicio, muy recomendados.</div>
-      <div class="review">Mi jardín quedó perfecto.</div>
-      <div class="review">Rápidos y profesionales.</div>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#quote">Cotizar ahora</a>
+          <a class="btn btn--ghost" href="#services">Ver servicios</a>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon">🌿</div>
+            <div>
+              <h3>Corte de césped</h3>
+              <p>Altura pareja, líneas limpias, sin reguero.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">✂️</div>
+            <div>
+              <h3>Edging y recorte</h3>
+              <p>Bordes marcados como regla, no “a lo loco”.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🍃</div>
+            <div>
+              <h3>Limpieza</h3>
+              <p>Hojas, yard cleanup y hauling.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🌱</div>
+            <div>
+              <h3>Mulch</h3>
+              <p>Mulch fresco para que el jardín se mire pro.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="quote" id="quote" aria-label="Formulario de cotización">
+        <h2>Solicitar cotización</h2>
+        <p class="muted">Te respondemos rápido. Sin spam.</p>
+
+        <form id="quoteForm">
+          <label>
+            Nombre
+            <input name="name" type="text" placeholder="Tu nombre" required />
+          </label>
+
+          <label>
+            Correo
+            <input name="email" type="email" placeholder="tu@email.com" required />
+          </label>
+
+          <label>
+            Teléfono
+            <input name="phone" type="tel" placeholder="(###) ###-####" required />
+          </label>
+
+          <label>
+            Dirección
+            <input name="address" type="text" placeholder="Calle, Ciudad" required />
+          </label>
+
+          <label>
+            Servicio necesario
+            <textarea name="service" rows="4" placeholder="Corte de césped, edging, limpieza, mulch..." required></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--full" type="submit">Enviar</button>
+          <p class="note" id="formNote" aria-live="polite"></p>
+        </form>
+
+        <div class="quote__small">
+          <div class="mini">
+            <span class="mini__dot"></span>
+            <span>Disponible: Lun-Sáb • 7AM–6PM</span>
+          </div>
+          <div class="mini">
+            <span class="mini__dot"></span>
+            <span>Área: (edita en el HTML)</span>
+          </div>
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Contacto</h2>
-    <p>📞 (267) 000-0000</p>
-    <p>✉️ greencut@example.com</p>
-  </div>
-</section>
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Servicios</h2>
+        <p class="muted">Minimal, claro y directo. Lo que hacemos, y ya.</p>
+      </div>
 
-<footer>
-  <p>© <span id="year"></span> GreenCut Lawn Care</p>
-</footer>
+      <div class="grid">
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">🌿</span>
+            <h3>Corte de césped</h3>
+          </div>
+          <p>Servicio recurrente o por visita. Cortamos, soplamos y dejamos limpio.</p>
+        </article>
 
-<script src="./script.js"></script>
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">✂️</span>
+            <h3>Edging & Trimming</h3>
+          </div>
+          <p>Orillas nítidas en aceras, driveway y camas. Recorte en detalles.</p>
+        </article>
+
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">🍃</span>
+            <h3>Limpieza</h3>
+          </div>
+          <p>Hojas, yard cleanup, poda ligera, recolección y retiro.</p>
+        </article>
+
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">🌱</span>
+            <h3>Mulch</h3>
+          </div>
+          <p>Instalación de mulch para camas y bordes. Se mira “nuevo”.</p>
+        </article>
+
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">🧼</span>
+            <h3>Detalle de patio</h3>
+          </div>
+          <p>Limpieza general, ramas, maleza, orden y acabado.</p>
+        </article>
+
+        <article class="tile">
+          <div class="tile__top">
+            <span class="badge">❄️</span>
+            <h3>Nieve (opcional)</h3>
+          </div>
+          <p>Remoción de nieve en invierno para driveway y walkway.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="work">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Trabajos recientes</h2>
+        <p class="muted">Aquí vas agregando fotos del cliente cuando quieras.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot">
+          <div class="shot__img shot__img--placeholder">Foto 1</div>
+          <figcaption>Before / After (ejemplo)</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot__img shot__img--placeholder">Foto 2</div>
+          <figcaption>Corte + edging</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot__img shot__img--placeholder">Foto 3</div>
+          <figcaption>Limpieza de hojas</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot__img shot__img--placeholder">Foto 4</div>
+          <figcaption>Mulch</figcaption>
+        </figure>
+      </div>
+
+      <div class="tip">
+        <strong>Tip rápido:</strong> Cuando tengas fotos, reemplazá cada “placeholder” por un
+        <code>&lt;img src="./tu-foto.jpg" alt="..." /&gt;</code> y listo.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap split">
+      <div>
+        <h2>Nosotros</h2>
+        <p class="muted">
+          Negocio local, comunicación clara y trabajo limpio. Si decimos que llegamos, llegamos.
+          Y si el césped se pone bravo, igual lo dejamos quieto 😄.
+        </p>
+
+        <ul class="list">
+          <li>✅ Presupuesto gratis</li>
+          <li>✅ Residencial y comercial</li>
+          <li>✅ Servicio la misma semana (según disponibilidad)</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3>Área de servicio</h3>
+        <p class="muted">Editá esta lista con las ciudades reales.</p>
+        <div class="chips">
+          <span class="chip">Hatfield</span>
+          <span class="chip">Lansdale</span>
+          <span class="chip">Montgomery County</span>
+          <span class="chip">Bucks County</span>
+        </div>
+
+        <div class="panel__cta">
+          <a class="btn btn--primary" href="#quote">Pedir cotización</a>
+          <a class="btn btn--ghost" href="#contact">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="contact">
+    <div class="wrap split">
+      <div>
+        <h2>Contacto</h2>
+        <p class="muted">Llamá, enviá correo o usá el formulario. Respondemos rápido.</p>
+
+        <div class="contact">
+          <a class="contact__row" href="tel:+12670000000">📞 (267) 000-0000</a>
+          <a class="contact__row" href="mailto:greencut@example.com">✉️ greencut@example.com</a>
+          <div class="contact__row">🕒 Lun–Sáb • 7AM–6PM</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>¿Listo para empezar?</h3>
+        <p class="muted">Un mensaje y arrancamos. Sin rodeos.</p>
+        <a class="btn btn--primary btn--full" href="#quote">Cotizar ahora</a>
+
+        <div class="tiny muted">
+          *Podés conectar el formulario a EmailJS/WhatsApp después. Por ahora funciona con “mailto”.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year"></span> GreenCut. Todos los derechos reservados.</p>
+      <a class="link" href="#home">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <a class="float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <script src="./script.js"></script>
 </body>
 </html>
 
