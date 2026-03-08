@@ -4,96 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariana's Lawn Care | Servicios</title>
-  <meta name="description" content="Servicios de lawn care." />
+  <meta name="description" content="Ariana's Lawn Care" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+
   <div class="topbar">
-    <div class="wrap topbar__inner">
+    <div class="container topbar__inner">
       <div class="topbar__left">
-        <span>📞 <a href="tel:+12670000000">(267) 000-0000</a></span>
+        <span>(267) 000-0000</span>
         <span class="dot">•</span>
-        <span>✉️ <a href="mailto:greencut@example.com">greencut@example.com</a></span>
+        <span>greencut@example.com</span>
       </div>
-      <a class="pill" href="./quote.html">Presupuesto gratis</a>
+      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
     </div>
   </div>
 
-  <header class="header">
-    <div class="wrap header__inner">
-      <a class="brand" href="./index.html" aria-label="Ariana's Lawn Care">
-        <img src="./logo.png" alt="Ariana's Lawn Care logo" class="brand__logo" />
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
+        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
       </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="nav">
-        <a class="nav__link " href="./index.html">Home</a>
-        <a class="nav__link is-active" href="./services.html">Servicios</a>
-        <a class="nav__link " href="./quote.html">Cotización</a>
-        <a class="nav__link " href="./work.html">Trabajos</a>
-        <a class="nav__link " href="./about.html">Nosotros</a>
-        <a class="nav__link " href="./contact.html">Contacto</a>
+      <nav class="nav-menu" id="navMenu">
+        <a class="" href="./index.html">Home</a>
+        <a class="is-active" href="./services.html">Servicios</a>
+        <a class="" href="./quote.html">Cotización</a>
+        <a class="" href="./work.html">Trabajos</a>
+        <a class="" href="./about.html">Nosotros</a>
+        <a class="" href="./contact.html">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main class="pageMain">
-  <section class="pageHero">
-    <div class="wrap">
-      <div class="kicker">Servicios</div>
+  
+<main class="page-main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Servicios</div>
       <h1>Nuestros servicios</h1>
-      <p class="lead">Todo bien claro, limpio y fácil de editar después.</p>
+      <p>Todo bien claro, limpio y fácil de editar después.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap">
-      <div class="grid">
-        <article class="tile">
-          <div class="tile__top"><span class="badge">🌿</span><h3>Corte de césped</h3></div>
-          <p>Servicio recurrente o por visita. Cortamos, soplamos y dejamos limpio.</p>
-        </article>
-        <article class="tile">
-          <div class="tile__top"><span class="badge">✂️</span><h3>Edging & Trimming</h3></div>
-          <p>Orillas nítidas en aceras, driveway y camas. Recorte en detalles.</p>
-        </article>
-        <article class="tile">
-          <div class="tile__top"><span class="badge">🍃</span><h3>Limpieza</h3></div>
-          <p>Hojas, yard cleanup, poda ligera, recolección y retiro.</p>
-        </article>
-        <article class="tile">
-          <div class="tile__top"><span class="badge">🌱</span><h3>Mulch</h3></div>
-          <p>Instalación de mulch para camas y bordes. Se mira “nuevo”.</p>
-        </article>
-        <article class="tile">
-          <div class="tile__top"><span class="badge">🧼</span><h3>Detalle de patio</h3></div>
-          <p>Limpieza general, ramas, maleza, orden y acabado.</p>
-        </article>
-        <article class="tile">
-          <div class="tile__top"><span class="badge">❄️</span><h3>Nieve (opcional)</h3></div>
-          <p>Remoción de nieve en invierno para driveway y walkway.</p>
-        </article>
-      </div>
+    <div class="container services-grid">
+      <article class="info-card">
+        <h3>Corte de césped</h3>
+        <p>Servicio recurrente o por visita. Cortamos, soplamos y dejamos limpio.</p>
+      </article>
+      <article class="info-card">
+        <h3>Edging & Trimming</h3>
+        <p>Orillas nítidas en aceras, driveway y camas. Recorte en detalles.</p>
+      </article>
+      <article class="info-card">
+        <h3>Limpieza</h3>
+        <p>Hojas, yard cleanup, poda ligera, recolección y retiro.</p>
+      </article>
+      <article class="info-card">
+        <h3>Mulch</h3>
+        <p>Instalación de mulch para camas y bordes. Se mira nuevo y ordenado.</p>
+      </article>
+      <article class="info-card">
+        <h3>Detalle de patio</h3>
+        <p>Limpieza general, ramas, maleza, orden y acabado.</p>
+      </article>
+      <article class="info-card">
+        <h3>Nieve (opcional)</h3>
+        <p>Remoción de nieve en invierno para driveway y walkway.</p>
+      </article>
+    </div>
 
-      <div class="section__cta">
-        <a class="btn btn--primary" href="./quote.html">Pedir cotización</a>
-        <a class="btn btn--ghost" href="./work.html">Ver trabajos</a>
-      </div>
+    <div class="container cta-row">
+      <a class="btn primary" href="./quote.html">Pedir cotización</a>
+      <a class="btn secondary" href="./work.html">Ver trabajos</a>
     </div>
   </section>
 </main>
 
+
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <p>© <span id="year"></span> Ariana's Lawn Care. Todos los derechos reservados.</p>
-      <a class="footer__link" href="./quote.html">Pedir cotización</a>
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ariana's Lawn Care</p>
+      <a href="./quote.html">Pedir cotización</a>
     </div>
   </footer>
 
-  <a class="float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
   <script src="./script.js"></script>
 </body>
 </html>
