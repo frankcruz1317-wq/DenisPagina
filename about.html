@@ -4,56 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariana's Lawn Care | Nosotros</title>
-  <meta name="description" content="Conoce más sobre la compañía." />
+  <meta name="description" content="Ariana's Lawn Care" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+
   <div class="topbar">
-    <div class="wrap topbar__inner">
+    <div class="container topbar__inner">
       <div class="topbar__left">
-        <span>📞 <a href="tel:+12670000000">(267) 000-0000</a></span>
+        <span>(267) 000-0000</span>
         <span class="dot">•</span>
-        <span>✉️ <a href="mailto:greencut@example.com">greencut@example.com</a></span>
+        <span>greencut@example.com</span>
       </div>
-      <a class="pill" href="./quote.html">Presupuesto gratis</a>
+      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
     </div>
   </div>
 
-  <header class="header">
-    <div class="wrap header__inner">
-      <a class="brand" href="./index.html" aria-label="Ariana's Lawn Care">
-        <img src="./logo.png" alt="Ariana's Lawn Care logo" class="brand__logo" />
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
+        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
       </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="nav">
-        <a class="nav__link " href="./index.html">Home</a>
-        <a class="nav__link " href="./services.html">Servicios</a>
-        <a class="nav__link " href="./quote.html">Cotización</a>
-        <a class="nav__link " href="./work.html">Trabajos</a>
-        <a class="nav__link is-active" href="./about.html">Nosotros</a>
-        <a class="nav__link " href="./contact.html">Contacto</a>
+      <nav class="nav-menu" id="navMenu">
+        <a class="" href="./index.html">Home</a>
+        <a class="" href="./services.html">Servicios</a>
+        <a class="" href="./quote.html">Cotización</a>
+        <a class="" href="./work.html">Trabajos</a>
+        <a class="is-active" href="./about.html">Nosotros</a>
+        <a class="" href="./contact.html">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main class="pageMain">
-  <section class="pageHero">
-    <div class="wrap">
-      <div class="kicker">Nosotros</div>
+  
+<main class="page-main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Nosotros</div>
       <h1>Quiénes somos</h1>
-      <p class="lead">Negocio local, comunicación clara y trabajo limpio.</p>
+      <p>Negocio local, comunicación clara y trabajo limpio.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap split">
+    <div class="container split">
       <div class="panel">
         <h2>Nuestra filosofía</h2>
-        <p class="muted">
+        <p>
           Si decimos que llegamos, llegamos. Nos enfocamos en orden, presentación,
           constancia y en dejar cada propiedad con una imagen cuidada.
         </p>
@@ -61,31 +63,33 @@
 
       <div class="panel">
         <h3>Área de servicio</h3>
-        <p class="muted">Editá esta lista con las ciudades reales.</p>
-        <div class="chips">
-          <span class="chip">Hatfield</span>
-          <span class="chip">Lansdale</span>
-          <span class="chip">Montgomery County</span>
-          <span class="chip">Bucks County</span>
+        <p>Editá esta lista con las ciudades reales.</p>
+        <div class="chip-row">
+          <span>Hatfield</span>
+          <span>Lansdale</span>
+          <span>Montgomery County</span>
+          <span>Bucks County</span>
         </div>
 
-        <div class="panel__cta">
-          <a class="btn btn--primary" href="./quote.html">Pedir cotización</a>
-          <a class="btn btn--ghost" href="./contact.html">Contactar</a>
+        <div class="cta-row">
+          <a class="btn primary" href="./quote.html">Pedir cotización</a>
+          <a class="btn secondary" href="./contact.html">Contactar</a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
+
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <p>© <span id="year"></span> Ariana's Lawn Care. Todos los derechos reservados.</p>
-      <a class="footer__link" href="./quote.html">Pedir cotización</a>
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ariana's Lawn Care</p>
+      <a href="./quote.html">Pedir cotización</a>
     </div>
   </footer>
 
-  <a class="float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
   <script src="./script.js"></script>
 </body>
 </html>
