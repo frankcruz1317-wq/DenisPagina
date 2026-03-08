@@ -1,4 +1,4 @@
-// GreenCut multi-page
+// Ariana's Lawn Care multi-page
 // Menú móvil + año + formulario mailto
 
 const menuBtn = document.getElementById("menuBtn");
@@ -50,7 +50,7 @@ if (form) {
 
     setNote("✅ Listo! Abriendo tu correo para enviar la solicitud...", "ok");
 
-    const to = "greencut@example.com"; // Cambia al correo real del cliente
+    const to = "greencut@example.com";
     const subject = encodeURIComponent("Nueva cotización - Lawn Care");
     const body = encodeURIComponent(
 `Nombre: ${name}
