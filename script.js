@@ -1,15 +1,9 @@
-// GreenCut v2 - Menú + Scroll (snap) + Form
+// GreenCut multi-page
+// Menú móvil + año + formulario mailto
+
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
-const page = document.getElementById("page");
-const toggleSnapBtn = document.getElementById("toggleSnap");
 
-function setSnapLabel(){
-  if (!toggleSnapBtn) return;
-  toggleSnapBtn.textContent = document.body.classList.contains("is-snap") ? "Modo: Snap" : "Modo: Normal";
-}
-
-// Mobile menu
 if (menuBtn && nav) {
   menuBtn.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("nav--open");
@@ -24,42 +18,9 @@ if (menuBtn && nav) {
   });
 }
 
-// Current year
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Smooth scroll helper
-function smoothTo(target){
-  if (!target) return;
-  const snapOn = document.body.classList.contains("is-snap");
-  if (snapOn && page) {
-    page.scrollTo({ top: target.offsetTop, behavior: "smooth" });
-  } else {
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-}
-
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener("click", (e) => {
-    const id = a.getAttribute("href");
-    if (!id || id === "#") return;
-    const target = document.querySelector(id);
-    if (!target) return;
-    e.preventDefault();
-    smoothTo(target);
-  });
-});
-
-// Toggle snap mode
-if (toggleSnapBtn) {
-  toggleSnapBtn.addEventListener("click", () => {
-    document.body.classList.toggle("is-snap");
-    setSnapLabel();
-  });
-  setSnapLabel();
-}
-
-// Quote form (mailto)
 const form = document.getElementById("quoteForm");
 const note = document.getElementById("formNote");
 
@@ -89,7 +50,7 @@ if (form) {
 
     setNote("✅ Listo! Abriendo tu correo para enviar la solicitud...", "ok");
 
-    const to = "greencut@example.com"; // Cambia al correo real
+    const to = "greencut@example.com"; // Cambia al correo real del cliente
     const subject = encodeURIComponent("Nueva cotización - Lawn Care");
     const body = encodeURIComponent(
 `Nombre: ${name}
@@ -105,4 +66,3 @@ ${service}`
     setTimeout(() => form.reset(), 700);
   });
 }
-
