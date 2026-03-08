@@ -1,59 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariana's Lawn Care | Servicios</title>
+  <meta name="description" content="Ariana's Lawn Care" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
 
-<header class="navbar">
-<div class="container nav-inner">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span>(267) 000-0000</span>
+        <span class="dot">•</span>
+        <span>greencut@example.com</span>
+      </div>
+      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
+    </div>
+  </div>
 
-<a class="logo" href="./index.html">
-<img src="./logo.png">
-</a>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
+        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
+      </a>
 
-<nav class="nav-menu">
-<a href="./index.html">Home</a>
-<a href="./services.html">Servicios</a>
-<a href="./quote.html">Cotización</a>
-<a href="./work.html">Trabajos</a>
-<a href="./about.html">Nosotros</a>
-<a href="./contact.html">Contacto</a>
-</nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-</div>
-</header>
+      <nav class="nav-menu" id="navMenu">
+        <a class="" href="./index.html">Home</a>
+        <a class="is-active" href="./services.html">Servicios</a>
+        <a class="" href="./quote.html">Cotización</a>
+        <a class="" href="./work.html">Trabajos</a>
+        <a class="" href="./about.html">Nosotros</a>
+        <a class="" href="./contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="section">
-<div class="container">
+  
+<main class="page-main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Servicios</div>
+      <h1>Nuestros servicios</h1>
+      <p>Todo bien claro, limpio y fácil de editar después.</p>
+    </div>
+  </section>
 
-<h1>Nuestros servicios</h1>
+  <section class="section">
+    <div class="container services-grid">
+      <article class="info-card">
+        <h3>Corte de césped</h3>
+        <p>Servicio recurrente o por visita. Cortamos, soplamos y dejamos limpio.</p>
+      </article>
+      <article class="info-card">
+        <h3>Edging & Trimming</h3>
+        <p>Orillas nítidas en aceras, driveway y camas. Recorte en detalles.</p>
+      </article>
+      <article class="info-card">
+        <h3>Limpieza</h3>
+        <p>Hojas, yard cleanup, poda ligera, recolección y retiro.</p>
+      </article>
+      <article class="info-card">
+        <h3>Mulch</h3>
+        <p>Instalación de mulch para camas y bordes. Se mira nuevo y ordenado.</p>
+      </article>
+      <article class="info-card">
+        <h3>Detalle de patio</h3>
+        <p>Limpieza general, ramas, maleza, orden y acabado.</p>
+      </article>
+      <article class="info-card">
+        <h3>Nieve (opcional)</h3>
+        <p>Remoción de nieve en invierno para driveway y walkway.</p>
+      </article>
+    </div>
 
-<div class="services-grid">
+    <div class="container cta-row">
+      <a class="btn primary" href="./quote.html">Pedir cotización</a>
+      <a class="btn secondary" href="./work.html">Ver trabajos</a>
+    </div>
+  </section>
+</main>
 
-<div class="card">
-<h3>Corte de césped</h3>
-<p>Corte limpio y uniforme.</p>
-</div>
 
-<div class="card">
-<h3>Edging</h3>
-<p>Bordes definidos.</p>
-</div>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ariana's Lawn Care</p>
+      <a href="./quote.html">Pedir cotización</a>
+    </div>
+  </footer>
 
-<div class="card">
-<h3>Limpieza</h3>
-<p>Hojas, ramas y yard cleanup.</p>
-</div>
+  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
-</div>
-
-</div>
-</section>
-
+  <script src="./script.js"></script>
 </body>
 </html>
