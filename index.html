@@ -4,121 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariana's Lawn Care | Home</title>
-  <meta name="description" content="Cuidado del césped profesional." />
+  <meta name="description" content="Ariana's Lawn Care" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+
   <div class="topbar">
-    <div class="wrap topbar__inner">
+    <div class="container topbar__inner">
       <div class="topbar__left">
-        <span>📞 <a href="tel:+12670000000">(267) 000-0000</a></span>
+        <span>(267) 000-0000</span>
         <span class="dot">•</span>
-        <span>✉️ <a href="mailto:greencut@example.com">greencut@example.com</a></span>
+        <span>greencut@example.com</span>
       </div>
-      <a class="pill" href="./quote.html">Presupuesto gratis</a>
+      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
     </div>
   </div>
 
-  <header class="header">
-    <div class="wrap header__inner">
-      <a class="brand" href="./index.html" aria-label="Ariana's Lawn Care">
-        <img src="./logo.png" alt="Ariana's Lawn Care logo" class="brand__logo" />
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
+        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
       </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="nav">
-        <a class="nav__link is-active" href="./index.html">Home</a>
-        <a class="nav__link " href="./services.html">Servicios</a>
-        <a class="nav__link " href="./quote.html">Cotización</a>
-        <a class="nav__link " href="./work.html">Trabajos</a>
-        <a class="nav__link " href="./about.html">Nosotros</a>
-        <a class="nav__link " href="./contact.html">Contacto</a>
+      <nav class="nav-menu" id="navMenu">
+        <a class="is-active" href="./index.html">Home</a>
+        <a class="" href="./services.html">Servicios</a>
+        <a class="" href="./quote.html">Cotización</a>
+        <a class="" href="./work.html">Trabajos</a>
+        <a class="" href="./about.html">Nosotros</a>
+        <a class="" href="./contact.html">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main>
-  <section class="heroPage">
-    <div class="heroPage__bg"></div>
-    <div class="wrap heroPage__grid">
-      <div class="heroPage__left">
-        <div class="kicker">Servicio local • Rápido • Limpio</div>
-        <h1>Cuidado profesional para un césped impecable</h1>
-        <p class="lead">
-          Ariana's Lawn Care ofrece corte de césped, edging, limpieza y mulch con atención puntual,
-          trabajo limpio y una presentación profesional para hogares y negocios.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="./quote.html">Pedir cotización</a>
-          <a class="btn btn--ghost" href="./services.html">Ver servicios</a>
-        </div>
-
-        <div class="bullets">
-          <div class="bullet">✅ Presupuesto gratis</div>
-          <div class="bullet">✅ Servicio confiable</div>
-          <div class="bullet">✅ Residencial y comercial</div>
-        </div>
-
-        <div class="miniAbout">
-          <h3>Presentación de la compañía</h3>
-          <p class="muted">
-            Nos enfocamos en resultados limpios, consistentes y visualmente profesionales.
-            La meta es que cada propiedad se mire cuidada desde la primera impresión.
+  
+<main>
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow">Servicio local • Rápido • Limpio</div>
+          <h1>Cuidado profesional para un césped impecable</h1>
+          <p>
+            Ariana's Lawn Care ofrece corte de césped, edging, limpieza y mulch
+            con trabajo limpio, atención puntual y una presentación profesional
+            para hogares y negocios.
           </p>
+
+          <div class="hero-buttons">
+            <a class="btn primary" href="./quote.html">Pedir cotización</a>
+            <a class="btn secondary" href="./services.html">Ver servicios</a>
+          </div>
+
+          <div class="hero-badges">
+            <span>Presupuesto gratis</span>
+            <span>Servicio confiable</span>
+            <span>Residencial y comercial</span>
+          </div>
         </div>
-      </div>
 
-      <div class="heroPage__right">
-        <div class="serviceStack">
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🌿</div>
-            <div class="serviceBig__txt">
-              <strong>Corte de césped</strong>
-              <span>Altura pareja y limpieza al finalizar.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">✂️</div>
-            <div class="serviceBig__txt">
-              <strong>Edging & recorte</strong>
-              <span>Bordes definidos y acabado preciso.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🍃</div>
-            <div class="serviceBig__txt">
-              <strong>Limpieza</strong>
-              <span>Hojas, ramas y yard cleanup.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🌱</div>
-            <div class="serviceBig__txt">
-              <strong>Mulch</strong>
-              <span>Detalle visual fresco y ordenado.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
+        <div class="hero-panel">
+          <div class="service-card">
+            <h3>Corte de césped</h3>
+            <p>Altura pareja y limpieza al finalizar.</p>
+          </div>
+          <div class="service-card">
+            <h3>Edging & recorte</h3>
+            <p>Bordes definidos y acabado preciso.</p>
+          </div>
+          <div class="service-card">
+            <h3>Limpieza</h3>
+            <p>Hojas, ramas y yard cleanup.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mulch</h3>
+            <p>Detalle visual fresco y ordenado.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap split">
+    <div class="container split">
       <div class="panel">
         <h2>¿Quiénes somos?</h2>
-        <p class="muted">
+        <p>
           Somos una compañía local dedicada al cuidado del césped y al mantenimiento exterior,
           con enfoque en puntualidad, limpieza y buena presentación.
         </p>
@@ -126,7 +101,7 @@
 
       <div class="panel">
         <h2>¿Qué sigue?</h2>
-        <p class="muted">
+        <p>
           Esta web está lista para crecer con fotos reales, áreas de servicio exactas,
           testimonios y trabajos before/after del cliente.
         </p>
@@ -135,14 +110,16 @@
   </section>
 </main>
 
+
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <p>© <span id="year"></span> Ariana's Lawn Care. Todos los derechos reservados.</p>
-      <a class="footer__link" href="./quote.html">Pedir cotización</a>
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ariana's Lawn Care</p>
+      <a href="./quote.html">Pedir cotización</a>
     </div>
   </footer>
 
-  <a class="float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
   <script src="./script.js"></script>
 </body>
 </html>
