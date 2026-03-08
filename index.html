@@ -1,67 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ariana's Lawn Care</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariana's Lawn Care | Home</title>
+  <meta name="description" content="Ariana's Lawn Care" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
 
-<div class="topbar">
-<div class="container">
-<div>(267) 000‑0000 • greencut@example.com</div>
-<a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
-</div>
-</div>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span>(267) 000-0000</span>
+        <span class="dot">•</span>
+        <span>greencut@example.com</span>
+      </div>
+      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
+    </div>
+  </div>
 
-<header class="navbar">
-<div class="container nav-inner">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
+        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
+      </a>
 
-<a class="logo" href="./index.html">
-<img src="./logo.png">
-</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-<nav class="nav-menu">
-<a href="./index.html">Home</a>
-<a href="./services.html">Servicios</a>
-<a href="./quote.html">Cotización</a>
-<a href="./work.html">Trabajos</a>
-<a href="./about.html">Nosotros</a>
-<a href="./contact.html">Contacto</a>
-</nav>
+      <nav class="nav-menu" id="navMenu">
+        <a class="is-active" href="./index.html">Home</a>
+        <a class="" href="./services.html">Servicios</a>
+        <a class="" href="./quote.html">Cotización</a>
+        <a class="" href="./work.html">Trabajos</a>
+        <a class="" href="./about.html">Nosotros</a>
+        <a class="" href="./contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-</div>
-</header>
+  
+<main>
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow">Servicio local • Rápido • Limpio</div>
+          <h1>Cuidado profesional para un césped impecable</h1>
+          <p>
+            Ariana's Lawn Care ofrece corte de césped, edging, limpieza y mulch
+            con trabajo limpio, atención puntual y una presentación profesional
+            para hogares y negocios.
+          </p>
 
-<section class="hero">
-<div class="hero-overlay">
-<div class="container">
+          <div class="hero-buttons">
+            <a class="btn primary" href="./quote.html">Pedir cotización</a>
+            <a class="btn secondary" href="./services.html">Ver servicios</a>
+          </div>
 
-<h1>Cuidado profesional para un césped impecable</h1>
+          <div class="hero-badges">
+            <span>Presupuesto gratis</span>
+            <span>Servicio confiable</span>
+            <span>Residencial y comercial</span>
+          </div>
+        </div>
 
-<p>
-Ariana's Lawn Care ofrece corte de césped, edging, limpieza y mulch
-con trabajo limpio y puntual.
-</p>
+        <div class="hero-panel">
+          <div class="service-card">
+            <h3>Corte de césped</h3>
+            <p>Altura pareja y limpieza al finalizar.</p>
+          </div>
+          <div class="service-card">
+            <h3>Edging & recorte</h3>
+            <p>Bordes definidos y acabado preciso.</p>
+          </div>
+          <div class="service-card">
+            <h3>Limpieza</h3>
+            <p>Hojas, ramas y yard cleanup.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mulch</h3>
+            <p>Detalle visual fresco y ordenado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-buttons">
-<a class="btn primary" href="./quote.html">Pedir cotización</a>
-<a class="btn secondary" href="./services.html">Ver servicios</a>
-</div>
+  <section class="section">
+    <div class="container split">
+      <div class="panel">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Somos una compañía local dedicada al cuidado del césped y al mantenimiento exterior,
+          con enfoque en puntualidad, limpieza y buena presentación.
+        </p>
+      </div>
 
-</div>
-</div>
-</section>
+      <div class="panel">
+        <h2>¿Qué sigue?</h2>
+        <p>
+          Esta web está lista para crecer con fotos reales, áreas de servicio exactas,
+          testimonios y trabajos before/after del cliente.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
 
-<footer class="footer">
-<div class="container">
-<div>© Ariana's Lawn Care</div>
-<div>Landscape services</div>
-</div>
-</footer>
 
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ariana's Lawn Care</p>
+      <a href="./quote.html">Pedir cotización</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <script src="./script.js"></script>
 </body>
 </html>
