@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariana's Lawn Care | Home</title>
-  <meta name="description" content="Cuidado del césped profesional." />
+  <title>Ariana's Lawn Care | Servicios</title>
+  <meta name="description" content="Servicios de lawn care." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -30,8 +30,8 @@
       </button>
 
       <nav class="nav" id="nav">
-        <a class="nav__link is-active" href="./index.html">Home</a>
-        <a class="nav__link " href="./services.html">Servicios</a>
+        <a class="nav__link " href="./index.html">Home</a>
+        <a class="nav__link is-active" href="./services.html">Servicios</a>
         <a class="nav__link " href="./quote.html">Cotización</a>
         <a class="nav__link " href="./work.html">Trabajos</a>
         <a class="nav__link " href="./about.html">Nosotros</a>
@@ -40,96 +40,47 @@
     </div>
   </header>
 
-  <main>
-  <section class="heroPage">
-    <div class="heroPage__bg"></div>
-    <div class="wrap heroPage__grid">
-      <div class="heroPage__left">
-        <div class="kicker">Servicio local • Rápido • Limpio</div>
-        <h1>Cuidado profesional para un césped impecable</h1>
-        <p class="lead">
-          Ariana's Lawn Care ofrece corte de césped, edging, limpieza y mulch con atención puntual,
-          trabajo limpio y una presentación profesional para hogares y negocios.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="./quote.html">Pedir cotización</a>
-          <a class="btn btn--ghost" href="./services.html">Ver servicios</a>
-        </div>
-
-        <div class="bullets">
-          <div class="bullet">✅ Presupuesto gratis</div>
-          <div class="bullet">✅ Servicio confiable</div>
-          <div class="bullet">✅ Residencial y comercial</div>
-        </div>
-
-        <div class="miniAbout">
-          <h3>Presentación de la compañía</h3>
-          <p class="muted">
-            Nos enfocamos en resultados limpios, consistentes y visualmente profesionales.
-            La meta es que cada propiedad se mire cuidada desde la primera impresión.
-          </p>
-        </div>
-      </div>
-
-      <div class="heroPage__right">
-        <div class="serviceStack">
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🌿</div>
-            <div class="serviceBig__txt">
-              <strong>Corte de césped</strong>
-              <span>Altura pareja y limpieza al finalizar.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">✂️</div>
-            <div class="serviceBig__txt">
-              <strong>Edging & recorte</strong>
-              <span>Bordes definidos y acabado preciso.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🍃</div>
-            <div class="serviceBig__txt">
-              <strong>Limpieza</strong>
-              <span>Hojas, ramas y yard cleanup.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-
-          <a class="serviceBig" href="./services.html">
-            <div class="serviceBig__icon">🌱</div>
-            <div class="serviceBig__txt">
-              <strong>Mulch</strong>
-              <span>Detalle visual fresco y ordenado.</span>
-            </div>
-            <span class="serviceBig__cta">Más info</span>
-          </a>
-        </div>
-      </div>
+  <main class="pageMain">
+  <section class="pageHero">
+    <div class="wrap">
+      <div class="kicker">Servicios</div>
+      <h1>Nuestros servicios</h1>
+      <p class="lead">Todo bien claro, limpio y fácil de editar después.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap split">
-      <div class="panel">
-        <h2>¿Quiénes somos?</h2>
-        <p class="muted">
-          Somos una compañía local dedicada al cuidado del césped y al mantenimiento exterior,
-          con enfoque en puntualidad, limpieza y buena presentación.
-        </p>
+    <div class="wrap">
+      <div class="grid">
+        <article class="tile">
+          <div class="tile__top"><span class="badge">🌿</span><h3>Corte de césped</h3></div>
+          <p>Servicio recurrente o por visita. Cortamos, soplamos y dejamos limpio.</p>
+        </article>
+        <article class="tile">
+          <div class="tile__top"><span class="badge">✂️</span><h3>Edging & Trimming</h3></div>
+          <p>Orillas nítidas en aceras, driveway y camas. Recorte en detalles.</p>
+        </article>
+        <article class="tile">
+          <div class="tile__top"><span class="badge">🍃</span><h3>Limpieza</h3></div>
+          <p>Hojas, yard cleanup, poda ligera, recolección y retiro.</p>
+        </article>
+        <article class="tile">
+          <div class="tile__top"><span class="badge">🌱</span><h3>Mulch</h3></div>
+          <p>Instalación de mulch para camas y bordes. Se mira “nuevo”.</p>
+        </article>
+        <article class="tile">
+          <div class="tile__top"><span class="badge">🧼</span><h3>Detalle de patio</h3></div>
+          <p>Limpieza general, ramas, maleza, orden y acabado.</p>
+        </article>
+        <article class="tile">
+          <div class="tile__top"><span class="badge">❄️</span><h3>Nieve (opcional)</h3></div>
+          <p>Remoción de nieve en invierno para driveway y walkway.</p>
+        </article>
       </div>
 
-      <div class="panel">
-        <h2>¿Qué sigue?</h2>
-        <p class="muted">
-          Esta web está lista para crecer con fotos reales, áreas de servicio exactas,
-          testimonios y trabajos before/after del cliente.
-        </p>
+      <div class="section__cta">
+        <a class="btn btn--primary" href="./quote.html">Pedir cotización</a>
+        <a class="btn btn--ghost" href="./work.html">Ver trabajos</a>
       </div>
     </div>
   </section>
