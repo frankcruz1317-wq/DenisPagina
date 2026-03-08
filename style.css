@@ -178,19 +178,33 @@ img{ max-width:100%; display:block; }
   background-position: center;
   filter: saturate(1.05);
   transform: scale(1.02);
+
+  /* FIX para que no tape los botones */
+  pointer-events: none;
+  z-index: 0;
 }
 .heroPage::after{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(to bottom, rgba(7,11,8,.10), rgba(7,11,8,.78));
+
+  /* FIX para que no tape los botones */
+  pointer-events: none;
+  z-index: 0;
 }
 .heroPage__grid{
   position:relative;
+  z-index: 2;
   display:grid;
   grid-template-columns: 1.08fr .92fr;
   gap: 22px;
   align-items: start;
+}
+.heroPage__left,
+.heroPage__right{
+  position: relative;
+  z-index: 3;
 }
 
 .kicker{
