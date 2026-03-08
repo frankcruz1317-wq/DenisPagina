@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenCut | Cotización</title>
+  <meta name="description" content="Solicita una cotización para lawn care." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="topbar__left">
+        <span>📞 <a href="tel:+12670000000">(267) 000-0000</a></span>
+        <span class="dot">•</span>
+        <span>✉️ <a href="mailto:greencut@example.com">greencut@example.com</a></span>
+      </div>
+      <a class="pill" href="./quote.html">Presupuesto gratis</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="./index.html" aria-label="GreenCut">
+        <div class="brand__mark">GC</div>
+        <div class="brand__text">
+          <strong>GreenCut</strong>
+          <span>Cuidado del Césped</span>
+        </div>
+      </a>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a class="nav__link" href="./index.html">Home</a>
+        <a class="nav__link" href="./services.html">Servicios</a>
+        <a class="nav__link is-active" href="./quote.html">Cotización</a>
+        <a class="nav__link" href="./work.html">Trabajos</a>
+        <a class="nav__link" href="./about.html">Nosotros</a>
+        <a class="nav__link" href="./contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pageMain">
+    <section class="pageHero">
+      <div class="wrap">
+        <div class="kicker">Cotización</div>
+        <h1>Solicitar cotización</h1>
+        <p class="lead">Completá el formulario y te respondemos rápido.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap quoteSplit">
+        <div class="quoteInfo">
+          <div class="fact">
+            <span class="fact__dot"></span>
+            <div>
+              <strong>Horario</strong>
+              <span>Lun–Sáb • 7AM–6PM</span>
+            </div>
+          </div>
+          <div class="fact">
+            <span class="fact__dot"></span>
+            <div>
+              <strong>Área</strong>
+              <span>Edita aquí las ciudades reales</span>
+            </div>
+          </div>
+          <div class="fact">
+            <span class="fact__dot"></span>
+            <div>
+              <strong>Respuesta</strong>
+              <span>Rápida y sin spam</span>
+            </div>
+          </div>
+
+          <div class="miniPanel">
+            <h3>Tip</h3>
+            <p class="muted">
+              Por ahora el formulario envía por mailto. Después lo conectamos a WhatsApp o EmailJS.
+            </p>
+          </div>
+        </div>
+
+        <aside class="quoteCard">
+          <h3>Formulario</h3>
+          <p class="muted">1 minuto y listo.</p>
+
+          <form id="quoteForm">
+            <label>Nombre
+              <input name="name" type="text" placeholder="Tu nombre" required />
+            </label>
+
+            <label>Correo
+              <input name="email" type="email" placeholder="tu@email.com" required />
+            </label>
+
+            <label>Teléfono
+              <input name="phone" type="tel" placeholder="(###) ###-####" required />
+            </label>
+
+            <label>Dirección
+              <input name="address" type="text" placeholder="Calle, Ciudad" required />
+            </label>
+
+            <label>Servicio necesario
+              <textarea name="service" rows="4" placeholder="Corte, edging, limpieza, mulch..." required></textarea>
+            </label>
+
+            <button class="btn btn--primary btn--full" type="submit">Enviar</button>
+            <p class="note" id="formNote" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year"></span> GreenCut. Todos los derechos reservados.</p>
+      <a class="footer__link" href="./quote.html">Pedir cotización</a>
+    </div>
+  </footer>
+
+  <a class="float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <script src="./script.js"></script>
+</body>
+</html>
