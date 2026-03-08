@@ -1,25 +1,17 @@
-// Ariana's Lawn Care multi-page
-// Menú móvil + año + formulario mailto
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
-
-if (menuBtn && nav) {
-  menuBtn.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("nav--open");
-    menuBtn.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("nav--open");
-      menuBtn.setAttribute("aria-expanded", "false");
-    });
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    const open = navMenu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
   });
 }
 
 const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 const form = document.getElementById("quoteForm");
 const note = document.getElementById("formNote");
@@ -27,9 +19,9 @@ const note = document.getElementById("formNote");
 function setNote(text, type = "ok") {
   if (!note) return;
   note.textContent = text;
-  if (type === "warn") note.style.color = "#ffd166";
-  if (type === "ok") note.style.color = "#9ef0b6";
-  if (type === "error") note.style.color = "#ff6b6b";
+  if (type === "warn") note.style.color = "#b45f06";
+  if (type === "ok") note.style.color = "#2f7a4f";
+  if (type === "error") note.style.color = "#a61b1b";
 }
 
 if (form) {
@@ -48,7 +40,7 @@ if (form) {
       return;
     }
 
-    setNote("✅ Listo! Abriendo tu correo para enviar la solicitud...", "ok");
+    setNote("Listo. Abriendo tu correo para enviar la solicitud...", "ok");
 
     const to = "greencut@example.com";
     const subject = encodeURIComponent("Nueva cotización - Lawn Care");
