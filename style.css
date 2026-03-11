@@ -1,3 +1,4 @@
+
 *{
   margin:0;
   padding:0;
@@ -97,8 +98,9 @@ body{
   gap: 16px;
 }
 
+/* UPDATED LOGO SIZE */
 .logo img{
-  height: 64px;
+  height: 90px;
   width: auto;
   display:block;
   filter: drop-shadow(0 3px 8px rgba(0,0,0,.10));
@@ -163,11 +165,10 @@ body{
   position: relative;
 }
 
+/* UPDATED HERO OVERLAY (removed green filter) */
 .hero-overlay{
   min-height: 560px;
-  background:
-    linear-gradient(90deg, rgba(20,58,38,0.70), rgba(20,58,38,0.40)),
-    var(--overlay);
+  background: rgba(0,0,0,0.25);
   display:flex;
   align-items:center;
 }
@@ -203,17 +204,6 @@ body{
   text-shadow: 0 6px 16px rgba(0,0,0,.18);
 }
 
-.hero p,
-.page-hero p,
-.panel p,
-.info-card p,
-.work-card figcaption,
-.quote-card p,
-.contact-card,
-.fact-card span{
-  line-height: 1.5;
-}
-
 .hero p{
   font-size: 18px;
   margin-bottom: 22px;
@@ -226,24 +216,6 @@ body{
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
-}
-
-.hero-badges{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.hero-badges span{
-  background: rgba(255,255,255,.14);
-  color: var(--white-green);
-  border: 1px solid rgba(255,255,255,.18);
-  padding: 9px 12px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 14px;
-  backdrop-filter: blur(4px);
 }
 
 .hero-panel{
@@ -290,12 +262,10 @@ body{
 .btn.primary{
   background: var(--green);
   color: var(--white-green);
-  box-shadow: 0 8px 20px rgba(22, 68, 42, 0.18);
 }
 
 .btn.primary:hover{
   background: var(--green-dark);
-  transform: translateY(-1px);
 }
 
 .btn.secondary{
@@ -308,301 +278,10 @@ body{
   background: var(--panel-2);
 }
 
-.btn.full{
-  width: 100%;
-}
-
-/* general sections */
-.section{
-  padding: 72px 0;
-}
-
-.page-main{
-  min-height: calc(100vh - 160px);
-}
-
-.page-hero{
-  padding: 72px 0 24px;
-  background: linear-gradient(180deg, #c4d9c1, #dfeadc);
-  border-bottom: 1px solid var(--border);
-}
-
-.page-hero h1{
-  font-size: clamp(32px, 5vw, 50px);
-  margin: 10px 0 12px;
-  color: var(--text);
-}
-
-.page-hero p{
-  font-size: 18px;
-  color: var(--text-soft);
-  max-width: 650px;
-}
-
-.split{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  align-items: start;
-}
-
-.stack{
-  display:grid;
-  gap: 14px;
-}
-
-.panel,
-.info-card,
-.quote-card,
-.fact-card,
-.work-card,
-.contact-card{
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-.panel h2,
-.panel h3{
-  margin-bottom: 10px;
-}
-
-.panel p,
-.info-card p,
-.quote-card p{
-  color: var(--text-soft);
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.info-card{
-  transition: .22s ease;
-}
-
-.info-card:hover{
-  transform: translateY(-4px);
-  background: #eef5eb;
-}
-
-.info-card h3{
-  margin-bottom: 8px;
-}
-
-.quote-card form{
-  display:grid;
-  gap: 10px;
-}
-
-.quote-card label{
-  display:block;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.quote-card input,
-.quote-card textarea{
-  width:100%;
-  margin-top: 6px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border:1px solid var(--border);
-  background: #eff7ec;
-  color: var(--text);
-  outline:none;
-}
-
-.quote-card input:focus,
-.quote-card textarea:focus{
-  border-color: var(--green);
-}
-
-.form-note{
-  min-height: 18px;
-  font-size: 14px;
-}
-
-.fact-card strong{
-  display:block;
-  margin-bottom: 4px;
-}
-
-.fact-card span{
-  color: var(--text-soft);
-}
-
-.work-grid{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.work-card{
-  overflow: hidden;
-  padding: 0;
-  transition: .22s ease;
-}
-
-.work-card:hover{
-  transform: translateY(-4px);
-}
-
-.work-placeholder{
-  height: 220px;
-  display:grid;
-  place-items:center;
-  background: linear-gradient(135deg, #bdd4bb, #dfeedd);
-  color: var(--text-soft);
-  font-weight: 700;
-}
-
-.work-card figcaption{
-  padding: 14px;
-  color: var(--text-soft);
-}
-
-.tip-panel{
-  margin-top: 18px;
-}
-
-.chip-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.chip-row span{
-  background: var(--panel);
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.contact-card{
-  text-decoration:none;
-  color: var(--text);
-  font-weight: 700;
-  transition: .2s ease;
-}
-
-.contact-card:hover{
-  background: var(--panel-2);
-}
-
+/* footer */
 .footer{
   background: var(--bg-nav);
   color: var(--white-green);
   padding: 24px 0;
   margin-top: 20px;
-}
-
-.footer__inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 12px;
-}
-
-.footer a{
-  color: var(--white-green);
-  text-decoration:none;
-  font-weight: 700;
-}
-
-.footer a:hover{
-  text-decoration: underline;
-}
-
-.whatsapp-float{
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  display:grid;
-  place-items:center;
-  background: var(--green);
-  color: white;
-  text-decoration:none;
-  font-size: 22px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.18);
-}
-
-@media (max-width: 980px){
-  .hero-content,
-  .split,
-  .services-grid,
-  .work-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-content{
-    grid-template-columns: 1fr;
-  }
-
-  .nav-menu{
-    display:none;
-    position:absolute;
-    right: 5%;
-    top: 120px;
-    background: var(--bg-nav);
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 16px;
-    padding: 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 220px;
-    box-shadow: 0 14px 30px rgba(0,0,0,.18);
-  }
-
-  .nav-menu.open{
-    display:flex;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-}
-
-@media (max-width: 700px){
-  .topbar__inner,
-  .footer__inner{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .topbar__left{
-    flex-wrap: wrap;
-  }
-
-  .services-grid,
-  .work-grid,
-  .split{
-    grid-template-columns: 1fr;
-  }
-
-  .logo img{
-    height: 54px;
-  }
-
-  .hero{
-    min-height: 500px;
-  }
-
-  .hero-overlay{
-    min-height: 500px;
-  }
-
-  .hero h1{
-    font-size: 40px;
-  }
 }
