@@ -577,6 +577,7 @@ body{
   padding: 0;
   transition: transform .25s ease, box-shadow .25s ease;
   animation: fadeUp .6s ease forwards;
+  cursor: pointer;
 }
 
 .work-card:hover{
@@ -606,9 +607,7 @@ body{
 }
 
 .work-card figcaption{
-  padding: 14px;
-  color: var(--text-soft);
-  font-weight: 600;
+  display:none;
 }
 
 .work-info-section{
@@ -617,6 +616,36 @@ body{
 
 .work-final-cta{
   padding-top: 12px;
+}
+
+/* lightbox */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+}
+
+.lightbox-img{
+  max-width: 92%;
+  max-height: 86vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  font-size: 42px;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
 }
 
 @keyframes fadeUp{
@@ -826,6 +855,12 @@ body{
 
   .services-photo-card img{
     height: 260px;
+  }
+
+  .lightbox-close{
+    top: 16px;
+    right: 20px;
+    font-size: 36px;
   }
 
   .whatsapp-float{
