@@ -67,45 +67,37 @@
 
         <div class="work-grid work-grid-large">
 
-          <figure class="work-card">
-            <img src="./Images/work/job1.jpg" alt="Lawn mowing service">
-            <figcaption>Lawn mowing</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job1.jpg" alt="Work photo 1">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job2.jpg" alt="Mulching and edging service">
-            <figcaption>Mulching & edging</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job2.jpg" alt="Work photo 2">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job3.jpg" alt="Striped lawn finish">
-            <figcaption>Striped lawn finish</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job3.jpg" alt="Work photo 3">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job4.jpg" alt="Hardscape wall install">
-            <figcaption>Hardscape wall install</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job4.jpg" alt="Work photo 4">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job5.jpg" alt="Yard cleanup service">
-            <figcaption>Yard cleanup</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job5.jpg" alt="Work photo 5">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job6.jpg" alt="Leaf cleanup service">
-            <figcaption>Leaf cleanup</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job6.jpg" alt="Work photo 6">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job7.jpg" alt="Hedge trimming service">
-            <figcaption>Hedge trimming</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job7.jpg" alt="Work photo 7">
+          </div>
 
-          <figure class="work-card">
-            <img src="./Images/work/job8.jpg" alt="Seasonal property maintenance">
-            <figcaption>Seasonal maintenance</figcaption>
-          </figure>
+          <div class="work-card">
+            <img src="./Images/work/job8.jpg" alt="Work photo 8">
+          </div>
 
         </div>
 
@@ -162,6 +154,46 @@
 
   <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="Expanded work photo" />
+  </div>
+
   <script src="./script.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll(".work-card img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxClose = document.querySelector(".lightbox-close");
+
+    galleryImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.style.display === "flex") {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
