@@ -459,11 +459,13 @@ body{
 .work-card{
   overflow: hidden;
   padding: 0;
-  transition: .22s ease;
+  transition: transform .25s ease, box-shadow .25s ease;
+  animation: fadeUp .6s ease forwards;
 }
 
 .work-card:hover{
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
 }
 
 .work-card img{
@@ -471,6 +473,11 @@ body{
   height:220px;
   object-fit:cover;
   display:block;
+  transition: transform .35s ease;
+}
+
+.work-card:hover img{
+  transform: scale(1.08);
 }
 
 .work-placeholder{
@@ -485,6 +492,18 @@ body{
 .work-card figcaption{
   padding: 14px;
   color: var(--text-soft);
+  font-weight: 600;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
 }
 
 .tip-panel{
