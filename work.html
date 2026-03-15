@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
   <div class="topbar">
     <div class="container topbar__inner">
       <div class="topbar__left">
@@ -42,7 +41,6 @@
   </header>
 
   <main class="page-main">
-
     <section class="page-hero">
       <div class="container">
         <div class="eyebrow service-eyebrow">Trabajos</div>
@@ -56,7 +54,6 @@
 
     <section class="section work-page-gallery">
       <div class="container">
-
         <div class="work-page-intro">
           <h2>Real work. Real results.</h2>
           <p>
@@ -66,47 +63,20 @@
         </div>
 
         <div class="work-grid work-grid-large">
-
-          <div class="work-card">
-            <img src="./Images/work/job1.jpg" alt="Work photo 1">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job2.jpg" alt="Work photo 2">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job3.jpg" alt="Work photo 3">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job4.jpg" alt="Work photo 4">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job5.jpg" alt="Work photo 5">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job6.jpg" alt="Work photo 6">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job7.jpg" alt="Work photo 7">
-          </div>
-
-          <div class="work-card">
-            <img src="./Images/work/job8.jpg" alt="Work photo 8">
-          </div>
-
+          <div class="work-card"><img src="./Images/work/job1.jpg" alt="Work photo 1" /></div>
+          <div class="work-card"><img src="./Images/work/job2.jpg" alt="Work photo 2" /></div>
+          <div class="work-card"><img src="./Images/work/job3.jpg" alt="Work photo 3" /></div>
+          <div class="work-card"><img src="./Images/work/job4.jpg" alt="Work photo 4" /></div>
+          <div class="work-card"><img src="./Images/work/job5.jpg" alt="Work photo 5" /></div>
+          <div class="work-card"><img src="./Images/work/job6.jpg" alt="Work photo 6" /></div>
+          <div class="work-card"><img src="./Images/work/job7.jpg" alt="Work photo 7" /></div>
+          <div class="work-card"><img src="./Images/work/job8.jpg" alt="Work photo 8" /></div>
         </div>
-
       </div>
     </section>
 
     <section class="section work-info-section">
       <div class="container split">
-
         <div class="panel">
           <h2>Why this page matters</h2>
           <p>
@@ -122,7 +92,6 @@
             correctos y la galería quedará lista para seguir creciendo.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -134,7 +103,6 @@
             Contact Ariana's Lawn Care today for a free estimate and let us help
             keep your lawn and exterior looking clean and professional.
           </p>
-
           <div class="cta-row">
             <a class="btn primary" href="./quote.html">Get Free Estimate</a>
             <a class="btn secondary" href="./services.html">View Services</a>
@@ -142,7 +110,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -155,25 +122,34 @@
   <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
   <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
     <img class="lightbox-img" id="lightbox-img" alt="Expanded work photo" />
+    <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
   </div>
 
   <script src="./script.js"></script>
   <script>
-    const galleryImages = document.querySelectorAll(".work-card img");
+    const galleryImages = Array.from(document.querySelectorAll(".work-card img"));
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxClose = document.querySelector(".lightbox-close");
+    const lightboxClose = document.getElementById("lightbox-close");
+    const lightboxPrev = document.getElementById("lightbox-prev");
+    const lightboxNext = document.getElementById("lightbox-next");
 
-    galleryImages.forEach((img) => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        document.body.style.overflow = "hidden";
-      });
-    });
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImg.src = galleryImages[currentIndex].src;
+      lightboxImg.alt = galleryImages[currentIndex].alt;
+    }
+
+    function openLightbox(index) {
+      lightbox.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      showImage(index);
+    }
 
     function closeLightbox() {
       lightbox.style.display = "none";
@@ -181,17 +157,39 @@
       document.body.style.overflow = "";
     }
 
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      showImage(currentIndex);
+    }
+
+    function showPrevImage() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      showImage(currentIndex);
+    }
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => openLightbox(index));
+    });
+
     lightboxClose.addEventListener("click", closeLightbox);
+    lightboxNext.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showNextImage();
+    });
+    lightboxPrev.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showPrevImage();
+    });
 
     lightbox.addEventListener("click", (e) => {
-      if (e.target !== lightboxImg) {
-        closeLightbox();
-      }
+      if (e.target === lightbox) closeLightbox();
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.style.display === "flex") {
-        closeLightbox();
+      if (lightbox.style.display === "flex") {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") showNextImage();
+        if (e.key === "ArrowLeft") showPrevImage();
       }
     });
   </script>
