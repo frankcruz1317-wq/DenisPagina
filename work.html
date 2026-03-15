@@ -1,197 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ariana's Lawn Care | Trabajos</title>
-  <meta name="description" content="Galería de trabajos recientes de Ariana's Lawn Care." />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span>(267) 000-0000</span>
-        <span class="dot">•</span>
-        <span>greencut@example.com</span>
-      </div>
-      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span>(267) 000-0000</span>
+      <span class="dot">•</span>
+      <span>greencut@example.com</span>
     </div>
+    <a class="quote-btn" href="quote.html">Presupuesto gratis</a>
   </div>
+</div>
 
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
-        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
-      </a>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="Ariana's Lawn Care">
+    </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
 
-      <nav class="nav-menu" id="navMenu">
-        <a href="./index.html">Home</a>
-        <a href="./services.html">Servicios</a>
-        <a href="./quote.html">Cotización</a>
-        <a class="is-active" href="./work.html">Trabajos</a>
-        <a href="./about.html">Nosotros</a>
-        <a href="./contact.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow service-eyebrow">Trabajos</div>
-        <h1>Trabajos recientes</h1>
-        <p>
-          Una galería simple de algunos trabajos recientes de lawn care,
-          mulching, cleanups y mantenimiento exterior.
-        </p>
-      </div>
-    </section>
-
-    <section class="section work-page-gallery">
-      <div class="container">
-        <div class="work-page-intro">
-          <h2>Real work. Real results.</h2>
-          <p>
-            Aquí puedes mostrar fotos reales del trabajo terminado para que el cliente
-            vea la calidad del servicio y la presentación final.
-          </p>
-        </div>
-
-        <div class="work-grid work-grid-large">
-          <div class="work-card"><img src="./Images/work/job1.jpg" alt="Work photo 1" /></div>
-          <div class="work-card"><img src="./Images/work/job2.jpg" alt="Work photo 2" /></div>
-          <div class="work-card"><img src="./Images/work/job3.jpg" alt="Work photo 3" /></div>
-          <div class="work-card"><img src="./Images/work/job4.jpg" alt="Work photo 4" /></div>
-          <div class="work-card"><img src="./Images/work/job5.jpg" alt="Work photo 5" /></div>
-          <div class="work-card"><img src="./Images/work/job6.jpg" alt="Work photo 6" /></div>
-          <div class="work-card"><img src="./Images/work/job7.jpg" alt="Work photo 7" /></div>
-          <div class="work-card"><img src="./Images/work/job8.jpg" alt="Work photo 8" /></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section work-info-section">
-      <div class="container split">
-        <div class="panel">
-          <h2>Why this page matters</h2>
-          <p>
-            La página de trabajos ayuda a generar confianza porque muestra resultados reales.
-            Muchas veces una buena foto convence más rápido que un párrafo largo.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h2>Easy to update</h2>
-          <p>
-            Solo sube nuevas imágenes a la carpeta <strong>Images/work</strong> con los nombres
-            correctos y la galería quedará lista para seguir creciendo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section work-final-cta">
-      <div class="container">
-        <div class="panel work-final-box">
-          <h2>Need help with your property?</h2>
-          <p>
-            Contact Ariana's Lawn Care today for a free estimate and let us help
-            keep your lawn and exterior looking clean and professional.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" href="./quote.html">Get Free Estimate</a>
-            <a class="btn secondary" href="./services.html">View Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Ariana's Lawn Care</p>
-      <a href="./quote.html">Pedir cotización</a>
-    </div>
-  </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/12670000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
-  <div id="lightbox" class="lightbox">
-    <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
-    <img class="lightbox-img" id="lightbox-img" alt="Expanded work photo" />
-    <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
-    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Servicios</a>
+      <a href="quote.html">Cotización</a>
+      <a class="is-active" href="work.html">Trabajos</a>
+      <a href="about.html">Nosotros</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
   </div>
+</header>
 
-  <script src="./script.js"></script>
-  <script>
-    const galleryImages = Array.from(document.querySelectorAll(".work-card img"));
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxClose = document.getElementById("lightbox-close");
-    const lightboxPrev = document.getElementById("lightbox-prev");
-    const lightboxNext = document.getElementById("lightbox-next");
+<main class="page-main">
 
-    let currentIndex = 0;
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow service-eyebrow">Trabajos</div>
+<h1>Trabajos recientes</h1>
+<p>Una galería simple de trabajos reales realizados por Ariana's Lawn Care.</p>
+</div>
+</section>
 
-    function showImage(index) {
-      currentIndex = index;
-      lightboxImg.src = galleryImages[currentIndex].src;
-      lightboxImg.alt = galleryImages[currentIndex].alt;
-    }
+<section class="section work-page-gallery">
+<div class="container">
 
-    function openLightbox(index) {
-      lightbox.style.display = "flex";
-      document.body.style.overflow = "hidden";
-      showImage(index);
-    }
+<div class="work-page-intro">
+<h2>Real work. Real results.</h2>
+<p>Fotos reales de mantenimiento de césped, limpieza de patios y jardinería.</p>
+</div>
 
-    function closeLightbox() {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-      document.body.style.overflow = "";
-    }
+<div class="work-grid">
 
-    function showNextImage() {
-      currentIndex = (currentIndex + 1) % galleryImages.length;
-      showImage(currentIndex);
-    }
+<div class="work-card"><img src="./Images/work/job1.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job2.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job3.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job4.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job5.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job6.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job7.jpg" alt=""></div>
+<div class="work-card"><img src="./Images/work/job8.jpg" alt=""></div>
 
-    function showPrevImage() {
-      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-      showImage(currentIndex);
-    }
+</div>
+</div>
+</section>
 
-    galleryImages.forEach((img, index) => {
-      img.addEventListener("click", () => openLightbox(index));
-    });
+<section class="section work-final-cta">
+<div class="container">
+<div class="panel work-final-box">
+<h2>Need help with your property?</h2>
+<p>Contact Ariana's Lawn Care today for a free estimate.</p>
 
-    lightboxClose.addEventListener("click", closeLightbox);
-    lightboxNext.addEventListener("click", (e) => {
-      e.stopPropagation();
-      showNextImage();
-    });
-    lightboxPrev.addEventListener("click", (e) => {
-      e.stopPropagation();
-      showPrevImage();
-    });
+<div class="cta-row">
+<a class="btn primary" href="quote.html">Get Free Estimate</a>
+<a class="btn secondary" href="services.html">View Services</a>
+</div>
 
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
+</div>
+</div>
+</section>
 
-    document.addEventListener("keydown", (e) => {
-      if (lightbox.style.display === "flex") {
-        if (e.key === "Escape") closeLightbox();
-        if (e.key === "ArrowRight") showNextImage();
-        if (e.key === "ArrowLeft") showPrevImage();
-      }
-    });
-  </script>
+</main>
+
+<footer class="footer">
+<div class="container footer__inner">
+<p>© Ariana's Lawn Care</p>
+<a href="quote.html">Pedir cotización</a>
+</div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/12670000000">💬</a>
+
+<div id="lightbox" class="lightbox">
+
+<button class="lightbox-btn lightbox-prev" id="lightbox-prev">&#10094;</button>
+
+<img class="lightbox-img" id="lightbox-img">
+
+<button class="lightbox-btn lightbox-next" id="lightbox-next">&#10095;</button>
+
+<span class="lightbox-close" id="lightbox-close">&times;</span>
+
+</div>
+
+<script>
+
+const galleryImages = Array.from(document.querySelectorAll(".work-card img"));
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("lightbox-close");
+const nextBtn = document.getElementById("lightbox-next");
+const prevBtn = document.getElementById("lightbox-prev");
+
+let currentIndex = 0;
+
+function showImage(index){
+currentIndex = index;
+lightboxImg.src = galleryImages[index].src;
+}
+
+galleryImages.forEach((img,index)=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+showImage(index);
+})
+})
+
+closeBtn.onclick=()=>{
+lightbox.style.display="none";
+}
+
+nextBtn.onclick=()=>{
+currentIndex=(currentIndex+1)%galleryImages.length;
+showImage(currentIndex);
+}
+
+prevBtn.onclick=()=>{
+currentIndex=(currentIndex-1+galleryImages.length)%galleryImages.length;
+showImage(currentIndex);
+}
+
+document.addEventListener("keydown",(e)=>{
+
+if(lightbox.style.display==="flex"){
+
+if(e.key==="Escape"){
+lightbox.style.display="none";
+}
+
+if(e.key==="ArrowRight"){
+nextBtn.click();
+}
+
+if(e.key==="ArrowLeft"){
+prevBtn.click();
+}
+
+}
+
+})
+
+</script>
+
 </body>
 </html>
