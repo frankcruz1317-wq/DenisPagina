@@ -618,35 +618,50 @@ body{
   padding-top: 12px;
 }
 
-/* lightbox */
+/* lightbox pro */
 .lightbox{
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.88);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  z-index: 9999;
+  inset:0;
+  background: rgba(0,0,0,.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:40px 80px;
+  z-index:9999;
 }
 
 .lightbox-img{
-  max-width: 92%;
-  max-height: 86vh;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  max-width:90%;
+  max-height:85vh;
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
 }
 
 .lightbox-close{
-  position: absolute;
-  top: 22px;
-  right: 28px;
-  font-size: 42px;
-  line-height: 1;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
 }
+
+.lightbox-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:none;
+  font-size:30px;
+  background:rgba(255,255,255,.2);
+  color:white;
+  cursor:pointer;
+}
+
+.lightbox-prev{left:20px;}
+.lightbox-next{right:20px;}
 
 @keyframes fadeUp{
   from{
