@@ -121,7 +121,7 @@ body{
 /* hero image + video */
 .hero,
 .hero-video{
-  min-height: 680px;
+  min-height: calc(100vh - 96px);
   position: relative;
   overflow: hidden;
 }
@@ -132,18 +132,30 @@ body{
   background-position: center;
 }
 
+.hero-video{
+  background: #091017;
+}
+
 .hero-video-bg{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center center;
   z-index:0;
 }
 
 .hero-overlay{
-  min-height: 680px;
-  background: linear-gradient(90deg, rgba(8,13,11,.86) 0%, rgba(8,13,11,.68) 44%, rgba(8,13,11,.42) 100%);
+  min-height: calc(100vh - 96px);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8,13,11,.82) 0%,
+      rgba(8,13,11,.60) 36%,
+      rgba(8,13,11,.40) 60%,
+      rgba(8,13,11,.55) 100%
+    );
   display:flex;
   align-items:center;
   padding: 36px 0;
@@ -155,7 +167,9 @@ body{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 28px;
-  align-items: start;
+  align-items: center;
+  width: 100%;
+  padding: 44px 0;
 }
 
 .hero-copy{
@@ -237,20 +251,24 @@ body{
   display:grid;
   gap: 14px;
   padding-top: 8px;
+  justify-self: end;
+  width: 100%;
+  max-width: 430px;
 }
 
 .service-card{
-  background: rgba(23,28,35,.9);
+  background: rgba(23,28,35,.76);
   border: 1px solid rgba(255,255,255,.10);
   padding: 18px;
   border-radius: 20px;
   box-shadow: var(--shadow);
   transition: .22s ease;
+  backdrop-filter: blur(8px);
 }
 
 .service-card:hover{
   transform: translateY(-4px);
-  background: rgba(30,37,45,.96);
+  background: rgba(30,37,45,.90);
 }
 
 .service-card h3{
@@ -761,6 +779,7 @@ body{
 
   .hero-content{
     grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .hero,
@@ -770,7 +789,13 @@ body{
 
   .hero-overlay{
     min-height: auto;
-    padding: 42px 0 52px;
+    padding: 48px 0 58px;
+  }
+
+  .hero-panel{
+    justify-self: start;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav-menu{
@@ -824,11 +849,18 @@ body{
 
   .hero-overlay{
     min-height: auto;
-    padding: 34px 0 44px;
+    padding: 38px 0 48px;
+    background: linear-gradient(180deg, rgba(8,13,11,.72) 0%, rgba(8,13,11,.58) 48%, rgba(8,13,11,.76) 100%);
+  }
+
+  .hero-content{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px 0;
   }
 
   .hero h1{
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .hero p,
@@ -838,6 +870,10 @@ body{
   .services-showcase__header p,
   .work-page-intro p{
     font-size: 16px;
+  }
+
+  .hero-panel{
+    grid-template-columns: 1fr;
   }
 
   .panel,
