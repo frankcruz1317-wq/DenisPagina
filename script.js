@@ -9,6 +9,7 @@ const navMenu = document.getElementById("navMenu");
 if (menuToggle && navMenu) {
   menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("open");
+
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!isExpanded));
   });
@@ -22,6 +23,7 @@ if (quoteForm) {
     e.preventDefault();
 
     const formData = new FormData(quoteForm);
+
     const name = formData.get("name") || "";
     const email = formData.get("email") || "";
     const phone = formData.get("phone") || "";
@@ -29,6 +31,7 @@ if (quoteForm) {
     const service = formData.get("service") || "";
 
     const subject = encodeURIComponent("New Quote Request - Ariana's Lawn Care");
+
     const body = encodeURIComponent(
 `Name: ${name}
 
@@ -42,10 +45,12 @@ Service Needed:
 ${service}`
     );
 
-    window.location.href = `mailto:hardscapeandco@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href =
+      `mailto:hardscapeandco@gmail.com?subject=${subject}&body=${body}`;
 
     if (formNote) {
-      formNote.textContent = "Tu aplicación de correo se abrirá para enviar la cotización.";
+      formNote.textContent =
+        "Your email application will open to send the quote request.";
     }
   });
 }
