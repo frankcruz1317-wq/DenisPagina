@@ -4,123 +4,210 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariana's Lawn Care | Nosotros</title>
-  <meta name="description" content="Conoce más sobre Ariana's Lawn Care, nuestro enfoque de trabajo y las áreas que atendemos en Pennsylvania." />
+  <meta name="description" content="Conoce Ariana's Lawn Care, negocio local especializado en lawn care y landscaping en Pennsylvania." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a class="logo" href="./index.html" aria-label="Ariana's Lawn Care">
-        <img src="./logo.png" alt="Ariana's Lawn Care logo" />
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span>(267) 992-2317</span>
+      <span class="dot">•</span>
+      <span>hardscapeandco@gmail.com</span>
+    </div>
+    <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a class="logo" href="./index.html">
+      <img src="./logo.png" alt="Ariana's Lawn Care">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="./index.html">Home</a>
+      <a href="./services.html">Servicios</a>
+      <a href="./quote.html">Cotización</a>
+      <a href="./work.html">Trabajos</a>
+      <a class="is-active" href="./about.html">Nosotros</a>
+      <a href="./contact.html">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="page-main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Nosotros</div>
+    <h1>Quiénes somos</h1>
+    <p>Negocio local, comunicación clara, trabajo limpio y atención profesional.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+
+    <div class="panel">
+      <h2>Nuestra filosofía</h2>
+      <p>
+        Si decimos que llegamos, llegamos. Nos enfocamos en orden,
+        puntualidad, presentación y en dejar cada propiedad con una
+        imagen limpia y cuidada.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>Servicio residencial y comercial</h2>
+      <p>
+        Trabajamos propiedades residenciales y comerciales con enfoque
+        en detalles, consistencia y una apariencia profesional en cada visita.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="./quote.html">Pedir cotización</a>
+        <a class="btn secondary" href="./contact.html">Contactar</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="panel">
+      <h2>Áreas de servicio</h2>
+      <p>Ariana's Lawn Care ofrece servicios en varias zonas de Pennsylvania:</p>
+
+      <div class="chip-row">
+
+        <span>Telford, PA</span>
+        <span>Lansdale, PA</span>
+        <span>Woxall, PA 19438</span>
+        <span>Hatfield, PA 19440</span>
+        <span>Mainland, PA 19438</span>
+        <span>Earlington, PA 18969</span>
+        <span>Green Lane, PA 18054</span>
+        <span>Sumneytown, PA 18054</span>
+        <span>Harleysville, PA 19438</span>
+        <span>Salfordville, PA 19473</span>
+        <span>Marlboroughville, PA 18073</span>
+        <span>Yorkshire Commons, PA 19440</span>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section reviews-section">
+
+  <div class="container">
+
+    <div class="work-page-intro">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <p>
+        Clientes en Montgomery County confían en Ariana's Lawn Care
+        para mantener sus propiedades limpias, ordenadas y bien cuidadas.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="info-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          Excellent service. My yard looks amazing after the cleanup.
+          Very professional and reliable.
+        </p>
+        <strong>Cliente en Lansdale</strong>
+      </div>
+
+      <div class="info-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          Great work and very fast. They paid attention to the details
+          and left everything looking perfect.
+        </p>
+        <strong>Cliente en Hatfield</strong>
+      </div>
+
+      <div class="info-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          Very professional and easy to communicate with.
+          Highly recommended.
+        </p>
+        <strong>Cliente en Harleysville</strong>
+      </div>
+
+    </div>
+
+    <div class="cta-row" style="margin-top:30px;">
+
+      <a class="btn secondary"
+      href="https://www.google.com/search?q=Ariana%27s+Cleaning+%26+Landscaping%2C+LLC"
+      target="_blank">
+
+      Ver reseñas en Google
+
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="./index.html">Home</a>
-        <a href="./services.html">Servicios</a>
-        <a href="./quote.html">Cotización</a>
-        <a href="./work.html">Trabajos</a>
-        <a class="is-active" href="./about.html">Nosotros</a>
-        <a href="./contact.html">Contacto</a>
-      </nav>
     </div>
-  </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow">Nosotros</div>
-        <h1>Quiénes somos</h1>
-        <p>Negocio local, comunicación clara, trabajo limpio y atención profesional.</p>
-      </div>
-    </section>
+  </div>
 
-    <section class="section">
-      <div class="container split">
-        <div class="panel">
-          <h2>Nuestra filosofía</h2>
-          <p>
-            Si decimos que llegamos, llegamos. Nos enfocamos en orden, puntualidad,
-            presentación y en dejar cada propiedad con una imagen limpia y cuidada.
-          </p>
-        </div>
+</section>
 
-        <div class="panel">
-          <h2>Servicio residencial y comercial</h2>
-          <p>
-            Trabajamos propiedades residenciales y comerciales con enfoque en detalles,
-            consistencia y una apariencia profesional en cada visita.
-          </p>
+<section class="section">
+  <div class="container split">
 
-          <div class="cta-row">
-            <a class="btn primary" href="./quote.html">Pedir cotización</a>
-            <a class="btn secondary" href="./contact.html">Contactar</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="panel">
-          <h2>Áreas de servicio</h2>
-          <p>
-            Ariana's Lawn Care ofrece servicios en varias zonas de Pennsylvania,
-            incluyendo las siguientes áreas:
-          </p>
-
-          <div class="chip-row">
-            <span>Telford, PA</span>
-            <span>Lansdale, PA</span>
-            <span>Woxall, PA 19438</span>
-            <span>Hatfield, PA 19440</span>
-            <span>Mainland, PA 19438</span>
-            <span>Earlington, PA 18969</span>
-            <span>Green Lane, PA 18054</span>
-            <span>Sumneytown, PA 18054</span>
-            <span>Harleysville, PA 19438</span>
-            <span>Salfordville, PA 19473</span>
-            <span>Marlboroughville, PA 18073</span>
-            <span>Yorkshire Commons, PA 19440</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div class="panel">
-          <h2>Lo que valoran nuestros clientes</h2>
-          <p>
-            Los clientes buscan un servicio confiable, rápido y bien presentado.
-            Nuestro objetivo es que cada trabajo refleje orden, limpieza y atención en los detalles.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h2>Presencia local</h2>
-          <p>
-            Atendemos clientes en comunidades cercanas y seguimos construyendo confianza
-            con trabajo constante, comunicación clara y resultados visibles.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Ariana's Lawn Care</p>
-      <a href="./quote.html">Pedir cotización</a>
+    <div class="panel">
+      <h2>Lo que valoran nuestros clientes</h2>
+      <p>
+        Los clientes buscan un servicio confiable, rápido y bien presentado.
+        Nuestro objetivo es que cada trabajo refleje orden, limpieza
+        y atención en los detalles.
+      </p>
     </div>
-  </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    <div class="panel">
+      <h2>Presencia local</h2>
+      <p>
+        Atendemos clientes en comunidades cercanas y seguimos
+        construyendo confianza con trabajo constante,
+        comunicación clara y resultados visibles.
+      </p>
+    </div>
 
-  <script src="./script.js"></script>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> Ariana's Lawn Care</p>
+    <a href="./quote.html">Pedir cotización</a>
+  </div>
+</footer>
+
+<a class="whatsapp-float"
+href="https://wa.me/12679922317"
+target="_blank">💬</a>
+
+<script src="./script.js"></script>
+
 </body>
 </html>
