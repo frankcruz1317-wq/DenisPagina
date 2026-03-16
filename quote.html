@@ -4,21 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariana's Lawn Care | Cotización</title>
-  <meta name="description" content="Ariana's Lawn Care" />
+  <meta name="description" content="Solicita una cotización con Ariana's Lawn Care." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span>(267) 992-2317</span>
-        <span class="dot">•</span>
-        <span>hardscapeandco@gmail.com</span>
-      </div>
-      <a class="quote-btn" href="./quote.html">Presupuesto gratis</a>
-    </div>
-  </div>
 
   <header class="navbar">
     <div class="container nav-inner">
@@ -46,7 +35,7 @@
       <div class="container">
         <div class="eyebrow">Cotización</div>
         <h1>Solicitar cotización</h1>
-        <p>Completá el formulario y te respondemos rápido.</p>
+        <p>Completa el formulario y te responderemos lo más pronto posible.</p>
       </div>
     </section>
 
@@ -57,43 +46,55 @@
             <strong>Horario</strong>
             <span>Lun–Sáb • 7AM–6PM</span>
           </div>
+
           <div class="fact-card">
             <strong>Área</strong>
             <span>Hatfield, Lansdale y zonas cercanas</span>
           </div>
+
           <div class="fact-card">
             <strong>Respuesta</strong>
-            <span>Rápida y sin spam</span>
+            <span>Rápida, directa y sin spam</span>
           </div>
+
           <div class="panel">
-            <h3>Tip</h3>
-            <p>Por ahora el formulario envía por mailto. Después lo conectamos a WhatsApp o EmailJS.</p>
+            <h3>¿Qué puedes pedir?</h3>
+            <p>
+              Lawn care, mulch, edging, cleanups, hardscape y mantenimiento exterior.
+            </p>
           </div>
         </div>
 
         <aside class="quote-card">
           <h3>Formulario</h3>
-          <p>1 minuto y listo.</p>
+          <p>Déjanos tus datos y el servicio que necesitas.</p>
 
-          <form id="quoteForm">
+          <form action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nueva cotización - Ariana's Lawn Care">
+            <input type="hidden" name="_template" value="table">
+
             <label>Nombre
-              <input name="name" type="text" placeholder="Tu nombre" required>
-            </label>
-            <label>Correo
-              <input name="email" type="email" placeholder="tu@email.com" required>
-            </label>
-            <label>Teléfono
-              <input name="phone" type="tel" placeholder="(###) ###-####" required>
-            </label>
-            <label>Dirección
-              <input name="address" type="text" placeholder="Calle, Ciudad" required>
-            </label>
-            <label>Servicio necesario
-              <textarea name="service" rows="4" placeholder="Corte, edging, limpieza, mulch..." required></textarea>
+              <input name="Nombre" type="text" placeholder="Tu nombre" required>
             </label>
 
-            <button class="btn primary full" type="submit">Enviar</button>
-            <p class="form-note" id="formNote" aria-live="polite"></p>
+            <label>Correo
+              <input name="Correo" type="email" placeholder="tu@email.com" required>
+            </label>
+
+            <label>Teléfono
+              <input name="Teléfono" type="tel" placeholder="(###) ###-####" required>
+            </label>
+
+            <label>Dirección
+              <input name="Dirección" type="text" placeholder="Calle, Ciudad" required>
+            </label>
+
+            <label>Servicio necesario
+              <textarea name="Servicio" rows="5" placeholder="Corte, edging, limpieza, mulch..." required></textarea>
+            </label>
+
+            <button class="btn primary full" type="submit">Enviar cotización</button>
           </form>
         </aside>
       </div>
