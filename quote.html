@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariana's Lawn Care | Cotización</title>
-  <meta name="description" content="Solicita una cotización con Ariana's Lawn Care." />
+  <title>Ariana's Lawn Care | Quote</title>
+  <meta name="description" content="Request a quote from Ariana's Lawn Care." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -15,17 +15,17 @@
         <img src="./logo.png" alt="Ariana's Lawn Care logo" />
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="nav-menu" id="navMenu">
         <a href="./index.html">Home</a>
-        <a href="./services.html">Servicios</a>
-        <a class="is-active" href="./quote.html">Cotización</a>
-        <a href="./work.html">Trabajos</a>
-        <a href="./about.html">Nosotros</a>
-        <a href="./contact.html">Contacto</a>
+        <a href="./services.html">Services</a>
+        <a class="is-active" href="./quote.html">Quote</a>
+        <a href="./work.html">Work</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -33,9 +33,9 @@
   <main class="page-main">
     <section class="page-hero">
       <div class="container">
-        <div class="eyebrow">Cotización</div>
-        <h1>Solicitar cotización</h1>
-        <p>Completa el formulario y te responderemos lo más pronto posible.</p>
+        <div class="eyebrow">Quote</div>
+        <h1>Request a Quote</h1>
+        <p>Fill out the form and we’ll get back to you as soon as possible.</p>
       </div>
     </section>
 
@@ -43,58 +43,58 @@
       <div class="container split">
         <div class="stack">
           <div class="fact-card">
-            <strong>Horario</strong>
-            <span>Lun–Sáb • 7AM–6PM</span>
+            <strong>Hours</strong>
+            <span>Mon–Sat • 7AM–6PM</span>
           </div>
 
           <div class="fact-card">
-            <strong>Área</strong>
-            <span>Hatfield, Lansdale y zonas cercanas</span>
+            <strong>Service Area</strong>
+            <span>Hatfield, Lansdale and nearby areas</span>
           </div>
 
           <div class="fact-card">
-            <strong>Respuesta</strong>
-            <span>Rápida, directa y sin spam</span>
+            <strong>Response</strong>
+            <span>Fast, direct and no spam</span>
           </div>
 
           <div class="panel">
-            <h3>¿Qué puedes pedir?</h3>
+            <h3>What can you request?</h3>
             <p>
-              Lawn care, mulch, edging, cleanups, hardscape y mantenimiento exterior.
+              Lawn care, mulch, edging, cleanups, hardscape and exterior maintenance.
             </p>
           </div>
         </div>
 
         <aside class="quote-card">
-          <h3>Formulario</h3>
-          <p>Déjanos tus datos y el servicio que necesitas.</p>
+          <h3>Quote Form</h3>
+          <p>Leave your information and tell us the service you need.</p>
 
           <form action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nueva cotización - Ariana's Lawn Care">
+            <input type="hidden" name="_subject" value="New Quote Request - Ariana's Lawn Care">
             <input type="hidden" name="_template" value="table">
 
-            <label>Nombre
-              <input name="Nombre" type="text" placeholder="Tu nombre" required>
+            <label>Name
+              <input name="Name" type="text" placeholder="Your name" required>
             </label>
 
-            <label>Correo
-              <input name="Correo" type="email" placeholder="tu@email.com" required>
+            <label>Email
+              <input name="Email" type="email" placeholder="you@email.com" required>
             </label>
 
-            <label>Teléfono
-              <input name="Teléfono" type="tel" placeholder="(###) ###-####" required>
+            <label>Phone
+              <input name="Phone" type="tel" placeholder="(###) ###-####" required>
             </label>
 
-            <label>Dirección
-              <input name="Dirección" type="text" placeholder="Calle, Ciudad" required>
+            <label>Address
+              <input name="Address" type="text" placeholder="Street, City" required>
             </label>
 
-            <label>Servicio necesario
-              <textarea name="Servicio" rows="5" placeholder="Corte, edging, limpieza, mulch..." required></textarea>
+            <label>Service Needed
+              <textarea name="Service Needed" rows="5" placeholder="Lawn mowing, edging, cleanup, mulch..." required></textarea>
             </label>
 
-            <button class="btn primary full" type="submit">Enviar cotización</button>
+            <button class="btn primary full" type="submit">Send Quote Request</button>
           </form>
         </aside>
       </div>
@@ -104,11 +104,16 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year"></span> Ariana's Lawn Care</p>
-      <a href="./quote.html">Pedir cotización</a>
+      <a href="./quote.html">Get a Quote</a>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
+      <path d="M19.11 17.27c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.9 1.13-.16.19-.33.22-.62.07-.29-.15-1.21-.44-2.31-1.41-.85-.76-1.42-1.69-1.59-1.97-.17-.29-.02-.44.13-.58.13-.13.29-.33.43-.49.14-.16.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.97 2.43.03 1.43 1.03 2.81 1.18 3 .14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.63.59.68.22 1.31.19 1.8.11.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33z" fill="currentColor"/>
+      <path d="M16.03 3.2c-7.02 0-12.71 5.69-12.71 12.71 0 2.24.58 4.34 1.6 6.17L3.2 28.8l6.9-1.81a12.67 12.67 0 0 0 5.93 1.5h.01c7.02 0 12.72-5.7 12.72-12.72 0-3.4-1.32-6.6-3.72-9s-5.6-3.57-9.01-3.57zm0 22.97h-.01a10.2 10.2 0 0 1-5.2-1.42l-.37-.22-4.09 1.07 1.09-3.98-.24-.41a10.13 10.13 0 0 1-1.56-5.42c0-5.62 4.57-10.19 10.2-10.19 2.72 0 5.28 1.06 7.2 2.98a10.13 10.13 0 0 1 2.99 7.21c0 5.63-4.58 10.2-10.21 10.2z" fill="currentColor"/>
+    </svg>
+  </a>
 
   <script src="./script.js"></script>
 </body>
