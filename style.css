@@ -723,6 +723,95 @@ body{
   line-height: 1.65;
 }
 
+/* CONTACT upgrades */
+.contact-main-section{
+  padding-top: 42px;
+}
+
+.contact-card-strong{
+  display:block;
+  text-decoration:none;
+  padding: 22px;
+}
+
+.contact-card-strong strong{
+  display:block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #9fe0b6;
+}
+
+.contact-card-strong span{
+  display:block;
+  color: var(--white-green);
+  font-size: 22px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.whatsapp-card strong{
+  color: #6fe28e;
+}
+
+.contact-cta-panel{
+  display:grid;
+  gap: 18px;
+}
+
+.contact-actions{
+  display:grid;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.contact-action-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  width:100%;
+  min-height: 52px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  text-decoration:none;
+  font-weight: 800;
+  color: var(--white-green);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  transition: .2s ease;
+}
+
+.contact-action-btn:hover{
+  background: rgba(255,255,255,.09);
+  transform: translateY(-1px);
+}
+
+.whatsapp-action-btn{
+  background: rgba(85,185,120,.12);
+  border-color: rgba(85,185,120,.24);
+}
+
+.whatsapp-action-btn:hover{
+  background: rgba(85,185,120,.18);
+}
+
+.wa-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 24px;
+  height: 24px;
+}
+
+.wa-icon svg{
+  width: 24px;
+  height: 24px;
+  display:block;
+  color: #6fe28e;
+}
+
 /* lightbox pro */
 .lightbox{
   position: fixed;
@@ -849,9 +938,15 @@ body{
   background: var(--green);
   color: #08110b;
   text-decoration:none;
-  font-size: 22px;
   box-shadow: 0 12px 28px rgba(0,0,0,.28);
   z-index: 60;
+}
+
+.whatsapp-float svg{
+  width: 30px;
+  height: 30px;
+  display:block;
+  color: #08110b;
 }
 
 @media (max-width: 980px){
@@ -859,10 +954,13 @@ body{
   .split,
   .services-grid,
   .work-grid,
-  .services-photos,
+  .services-photos{
+    grid-template-columns: 1fr 1fr;
+  }
+
   .google-rating-bar,
   .reviews-cards-grid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .hero-content{
@@ -978,7 +1076,8 @@ body{
   .work-card,
   .contact-card,
   .service-card,
-  .review-card-premium{
+  .review-card-premium,
+  .contact-card-strong{
     padding: 18px;
   }
 
@@ -1038,8 +1137,17 @@ body{
     font-size: 22px;
   }
 
+  .contact-card-strong span{
+    font-size: 18px;
+  }
+
   .whatsapp-float{
     width: 52px;
     height: 52px;
+  }
+
+  .whatsapp-float svg{
+    width: 28px;
+    height: 28px;
   }
 }
