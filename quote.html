@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariana's Lawn Care | Quote</title>
-  <meta name="description" content="Request a quote from Ariana's Lawn Care." />
-  <link rel="stylesheet" href="./style.css" />
+  <title>Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care</title>
+  <meta name="description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
+  <link rel="stylesheet" href="./style.css?v=20260909" />
+  <link rel="canonical" href="https://arianaslawncare.com/quote.html">
+  <meta property="og:title" content="Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care">
+  <meta property="og:description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
+  <meta property="og:url" content="https://arianaslawncare.com/quote.html">
+  <meta property="og:type" content="website">
 </head>
 <body>
 
@@ -40,7 +45,7 @@
     </section>
 
     <section class="section">
-      <div class="container split">
+      <div class="container split quote-layout">
         <div class="stack">
           <div class="fact-card">
             <strong>Hours</strong>
@@ -67,34 +72,81 @@
 
         <aside class="quote-card">
           <h3>Quote Form</h3>
-          <p>Leave your information and tell us the service you need.</p>
+          <p>Tell us what you need and exactly where the work will take place.</p>
 
-          <form action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Quote Request - Ariana's Lawn Care">
+          <form id="quoteForm" action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Complete Quote Request - Ariana's Lawn Care">
             <input type="hidden" name="_template" value="table">
-
-            <label>Name
-              <input name="Name" type="text" placeholder="Your name" required>
-            </label>
-
-            <label>Email
-              <input name="Email" type="email" placeholder="you@email.com" required>
-            </label>
-
-            <label>Phone
-              <input name="Phone" type="tel" placeholder="(###) ###-####" required>
-            </label>
-
-            <label>Address
-              <input name="Address" type="text" placeholder="Street, City" required>
-            </label>
-
-            <label>Service Needed
-              <textarea name="Service Needed" rows="5" placeholder="Lawn mowing, edging, cleanup, mulch..." required></textarea>
-            </label>
-
-            <button class="btn primary full" type="submit">Send Quote Request</button>
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Ariana&#39;s Lawn Care! We&#39;ve received your quote request. A member of our team will contact you as soon as possible. This message confirms your request, not a scheduled appointment. If you need to reach us, call (267) 992-2317.">
+            <input type="hidden" name="_next" value="https://arianaslawncare.com/thanks.html">
+            <input type="hidden" name="Full service address" id="fullAddress">
+            <input type="hidden" name="Map link" id="mapLink">
+            <input type="hidden" name="Country" value="United States">
+            <input type="text" name="_honey" class="spam-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <p class="form-hint">Fields marked * are required. Enter the property address where you need service.</p>
+            <fieldset>
+              <legend>1. Your contact details</legend>
+              <label for="customerName">Full name *</label>
+              <input id="customerName" name="name" autocomplete="name" minlength="2" maxlength="100" required>
+              <label for="customerEmail">Email *</label>
+              <input id="customerEmail" name="email" type="email" autocomplete="email" maxlength="150" required>
+              <label for="customerPhone">Phone *</label>
+              <input id="customerPhone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" minlength="10" maxlength="25" required aria-describedby="phoneHint">
+              <small id="phoneHint">Include your area code, for example (267) 555-0123.</small>
+            </fieldset>
+            <fieldset>
+              <legend>2. Complete property address</legend>
+              <label for="street">House number and street *</label>
+              <input id="street" name="Street address" autocomplete="address-line1" minlength="5" maxlength="180" pattern=".*[0-9].*" placeholder="123 Main Street" required aria-describedby="streetHint">
+              <small id="streetHint">Use the full street name and house number, not just your town or a PO box.</small>
+              <label for="unit">Apartment / suite / unit (if applicable)</label>
+              <input id="unit" name="Apartment or unit" autocomplete="address-line2" maxlength="60" placeholder="Unit 2B">
+              <div class="form-columns">
+                <div>
+                  <label for="city">City / town *</label>
+                  <input id="city" name="City" autocomplete="address-level2" list="localTowns" minlength="2" maxlength="80" required>
+                  <datalist id="localTowns"><option value="Hatfield"></option><option value="Lansdale"></option><option value="Telford"></option><option value="Harleysville"></option></datalist>
+                </div>
+                <div>
+                  <label for="state">State *</label>
+                  <select id="state" name="State" autocomplete="address-level1" required>
+                    <option value="">Select state</option><option value="PA">Pennsylvania (PA)</option>
+                  </select>
+                </div>
+              </div>
+              <label for="zip">ZIP code *</label>
+              <input id="zip" name="ZIP code" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" placeholder="19440" required aria-describedby="zipHint">
+              <small id="zipHint">Enter 5 digits, or ZIP+4 (for example 19440-1234).</small>
+              <p id="addressPreview" class="address-preview" aria-live="polite">Your complete service address will appear here.</p>
+            </fieldset>
+            <fieldset>
+              <legend>3. Tell us about the job</legend>
+              <label for="service">Main service *</label>
+              <select id="service" name="Main service" required>
+                <option value="">Choose a service</option>
+                <option>Leaf removal</option><option>Fall yard cleanup</option><option>Gutter cleaning</option>
+                <option>Lawn mowing</option><option>Mulch and edging</option><option>Hedge trimming</option>
+                <option>Hardscape</option><option>Snow removal</option><option>Other</option>
+              </select>
+              <label for="timing">When would you like service? *</label>
+              <select id="timing" name="Preferred timing" required>
+                <option value="">Choose timing</option><option>As soon as available</option>
+                <option>Within 1–2 weeks</option><option>Within a month</option><option>Flexible</option>
+              </select>
+              <label for="jobDetails">Job details *</label>
+              <textarea id="jobDetails" name="Job details" rows="4" minlength="15" maxlength="2000" required placeholder="Tell us which areas need work, how many leaves have fallen, and any gate or access instructions."></textarea>
+              <label class="check-row"><input id="addressConfirmed" name="Address confirmed" type="checkbox" value="Yes" required> <span>I checked the house number, street, unit (if applicable), city, state and ZIP code. *</span></label>
+            </fieldset>
+            <p class="form-hint">Your contact and property details are sent through FormSubmit to Ariana's Lawn Care to respond to this request. This is a quote request, not a confirmed appointment.</p>
+            <div id="quoteReview" class="quote-review" hidden tabindex="-1" aria-labelledby="reviewTitle">
+              <h3 id="reviewTitle">Review your request</h3>
+              <dl id="reviewDetails"></dl>
+              <p>Check the address and contact details above, then select “Send quote request”.</p>
+              <button class="btn secondary" type="button" id="editQuote">Edit details</button>
+            </div>
+            <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
+            <button class="btn primary full" id="sendQuote" type="submit">Send quote request</button>
+            <noscript><p>Check all your details before sending. You can submit this form without JavaScript.</p></noscript>
           </form>
         </aside>
       </div>
@@ -106,7 +158,8 @@
       <p>© <span id="year"></span> Ariana's Lawn Care</p>
       <a href="./quote.html">Get a Quote</a>
     </div>
-  </footer>
+    <div class="container footer-local">Serving Hatfield, Lansdale, Telford &amp; Harleysville, PA · <a href="tel:+12679922317">(267) 992-2317</a> · <a href="./index.html#fall-services">Fall services</a></div>
+</footer>
 
   <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
@@ -115,6 +168,8 @@
     </svg>
   </a>
 
-  <script src="./script.js"></script>
+  <script src="./quote-rules.js?v=20260909"></script>
+  <script src="./script.js?v=20260909"></script>
 </body>
 </html>
+

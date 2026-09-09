@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariana's Lawn Care | Home</title>
-  <meta name="description" content="Ariana's Lawn Care provides lawn care, mulching, cleanups, hardscape and exterior property maintenance in Pennsylvania." />
-  <link rel="stylesheet" href="./style.css" />
+  <title>Fall Cleanup & Lawn Care in Hatfield, PA | Ariana’s Lawn Care</title>
+  <meta name="description" content="Leaf removal, fall yard cleanup and lawn care in Hatfield, Lansdale, Telford and Harleysville, PA. Plan your seasonal service and request a free estimate.">
+  <link rel="stylesheet" href="./style.css?v=20260909" />
+  <link rel="canonical" href="https://arianaslawncare.com/">
+  <meta property="og:title" content="Fall Cleanup & Lawn Care in Hatfield, PA | Ariana’s Lawn Care">
+  <meta property="og:description" content="Leaf removal, fall yard cleanup and lawn care in Hatfield, Lansdale, Telford and Harleysville, PA. Plan your seasonal service and request a free estimate.">
+  <meta property="og:url" content="https://arianaslawncare.com/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://arianaslawncare.com/#business","name":"Ariana's Lawn Care","url":"https://arianaslawncare.com/","logo":"https://arianaslawncare.com/logo.png","telephone":"+1-267-992-2317","email":"hardscapeandco@gmail.com","areaServed":[{"@type":"City","name":"Hatfield, Pennsylvania"},{"@type":"City","name":"Lansdale, Pennsylvania"},{"@type":"City","name":"Telford, Pennsylvania"},{"@type":"City","name":"Harleysville, Pennsylvania"}]},{"@type":"Service","name":"Lawn care and seasonal property maintenance","serviceType":["Leaf removal","Fall yard cleanup","Gutter cleaning","Lawn mowing","Mulch and edging"],"provider":{"@id":"https://arianaslawncare.com/#business"},"areaServed":[{"@type":"City","name":"Hatfield, Pennsylvania"},{"@type":"City","name":"Lansdale, Pennsylvania"},{"@type":"City","name":"Telford, Pennsylvania"},{"@type":"City","name":"Harleysville, Pennsylvania"}],"url":"https://arianaslawncare.com/services.html"}]}</script>
 </head>
 <body>
 
@@ -41,20 +47,17 @@
         <div class="container hero-content">
 
           <div class="hero-copy">
-            <div class="eyebrow">Local Service • Fast • Clean</div>
-            <h1>Professional care for a clean, polished property</h1>
+            <div class="eyebrow">Fall cleanup • Hatfield &amp; nearby towns</div>
+            <h1>Fall cleanup &amp; leaf removal in Hatfield, PA</h1>
 
-            <p>
-              Ariana's Lawn Care provides lawn mowing, edging, cleanups, mulch,
-              hardscape and exterior maintenance with clean work, punctual service
-              and professional results.
-            </p>
+            <p>Get your lawn, walkways and garden beds ready for the season. Serving Hatfield, Lansdale, Telford and Harleysville with leaf removal, yard cleanup and gutter cleaning.</p>
 
             <div class="hero-buttons">
-              <a class="btn primary" href="./quote.html">Get a Quote</a>
-              <a class="btn secondary" href="./services.html">View Services</a>
+              <a class="btn primary" href="#fall-services">Plan my fall cleanup</a>
+              <a class="btn secondary" href="tel:+12679922317">Call (267) 992-2317</a>
             </div>
 
+            <button id="videoToggle" class="video-toggle" type="button" hidden>Pause background</button>
             <div class="hero-badges">
               <span>Free estimates</span>
               <span>Reliable service</span>
@@ -64,27 +67,65 @@
 
           <div class="hero-panel">
             <div class="service-card">
-              <h3>Lawn Mowing</h3>
-              <p>Even cuts and a clean finish every time.</p>
+              <h3>Leaf Removal</h3>
+              <p>Clear fallen leaves from lawns and outdoor spaces.</p>
             </div>
 
             <div class="service-card">
-              <h3>Edging & Trimming</h3>
-              <p>Sharp edges and a polished final look.</p>
+              <h3>Fall Yard Cleanup</h3>
+              <p>Take care of branches, leaves and seasonal debris.</p>
             </div>
 
             <div class="service-card">
-              <h3>Cleanups</h3>
-              <p>Leaves, branches and seasonal yard cleanup.</p>
+              <h3>Gutter Cleaning</h3>
+              <p>Remove leaf buildup from your gutters.</p>
             </div>
 
             <div class="service-card">
-              <h3>Mulch</h3>
-              <p>Fresh detail that makes the whole property stand out.</p>
+              <h3>Ongoing Lawn Care</h3>
+              <p>Keep your property maintained through the season.</p>
             </div>
           </div>
 
         </div>
+      </div>
+    </section>
+
+
+    <section class="section seasonal-section" id="fall-services" aria-labelledby="fallTitle">
+      <div class="container">
+        <div class="eyebrow">This season</div>
+        <h2 id="fallTitle">Leaves down. Yard ready.</h2>
+        <p class="section-intro">Build your fall cleanup request for Hatfield, Lansdale, Telford or Harleysville, PA.</p>
+        <form id="seasonPlanner" action="./quote.html" method="GET" class="season-planner">
+          <fieldset>
+            <legend>What needs attention?</legend>
+            <div class="season-options">
+              <label class="season-option">
+                <input type="radio" name="service" value="Leaf removal" checked>
+                <span><strong>Leaf removal</strong><span>Leaves on lawns, paths and garden beds.</span></span>
+              </label>
+              <label class="season-option">
+                <input type="radio" name="service" value="Fall yard cleanup">
+                <span><strong>Fall yard cleanup</strong><span>Leaves, fallen branches and seasonal debris.</span></span>
+              </label>
+              <label class="season-option">
+                <input type="radio" name="service" value="Gutter cleaning">
+                <span><strong>Gutter cleaning</strong><span>Clear leaves and buildup from gutters.</span></span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="planner-bottom">
+            <div><label for="leafScope">How does the yard look?</label>
+              <select id="leafScope" name="scope"><option>Light leaf cover</option><option>Heavy leaf cover</option><option>Not sure yet</option></select>
+            </div>
+            <div><label for="plannerTown">Your service area</label>
+              <select id="plannerTown" name="city"><option value="">Choose your town</option><option>Hatfield</option><option>Lansdale</option><option>Telford</option><option>Harleysville</option><option value="">Nearby / other town</option></select>
+            </div>
+            <button class="btn primary" type="submit">Build my quote request →</button>
+          </div>
+          <p id="plannerAdvice" class="form-hint" aria-live="polite">Choose a seasonal service to start your request.</p>
+        </form>
       </div>
     </section>
 
@@ -141,6 +182,32 @@
       </div>
     </section>
 
+
+    <section class="section" id="service-areas" aria-labelledby="areasTitle">
+      <div class="container split">
+        <div class="panel">
+          <div class="eyebrow">Close to home</div>
+          <h2 id="areasTitle">Local lawn care in your neighborhood</h2>
+          <p>We serve residential and commercial properties in Hatfield, Lansdale, Telford and Harleysville, Pennsylvania. Request leaf removal, fall cleanup or ongoing lawn care at your property.</p>
+          <div class="chip-row area-links">
+            <a href="./quote.html?city=Hatfield">Hatfield, PA</a>
+            <a href="./quote.html?city=Lansdale">Lansdale, PA</a>
+            <a href="./quote.html?city=Telford">Telford, PA</a>
+            <a href="./quote.html?city=Harleysville">Harleysville, PA</a>
+          </div>
+          <p class="form-hint">Just outside these towns? Call us to check availability for your address.</p>
+          <a class="btn secondary" href="tel:+12679922317">Call (267) 992-2317</a>
+        </div>
+        <div class="faq">
+          <h2>Before you book</h2>
+          <details><summary>Which fall services can I request?</summary><p>Leaf removal, yard cleanup, gutter cleaning, hedge trimming and other exterior maintenance. Choose your main service and describe any extra work in the quote form.</p></details>
+          <details><summary>What information helps you prepare a quote?</summary><p>Your complete property address, the areas that need attention, leaf conditions and any gate or access instructions. Include your phone number and email so we can follow up.</p></details>
+          <details><summary>Can I request more than one service?</summary><p>Yes. Select your main service and list the others in “Job details”. We will discuss the scope with you before scheduling.</p></details>
+          <details><summary>Does sending a request book an appointment?</summary><p>No. A member of our team will contact you to discuss the work, pricing and availability before an appointment is confirmed.</p></details>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -148,7 +215,8 @@
       <p>© <span id="year"></span> Ariana's Lawn Care</p>
       <a href="./quote.html">Get a Quote</a>
     </div>
-  </footer>
+    <div class="container footer-local">Serving Hatfield, Lansdale, Telford &amp; Harleysville, PA · <a href="tel:+12679922317">(267) 992-2317</a> · <a href="./index.html#fall-services">Fall services</a></div>
+</footer>
 
   <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
@@ -157,7 +225,9 @@
     </svg>
   </a>
 
-  <script src="./script.js"></script>
+  <script src="./quote-rules.js?v=20260909"></script>
+  <script src="./script.js?v=20260909"></script>
 </body>
 </html>
+
 
