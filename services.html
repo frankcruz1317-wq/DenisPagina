@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lawn Care & Fall Cleanup Services Near Hatfield, PA</title>
   <meta name="description" content="Explore leaf removal, gutter cleaning, lawn mowing, mulch and seasonal yard maintenance in Hatfield, Lansdale, Telford and Harleysville, Pennsylvania.">
-  <link rel="stylesheet" href="./style.css?v=20260909" />
+  <link rel="stylesheet" href="./style.css?v=20260909-ui2" />
   <link rel="canonical" href="https://arianaslawncare.com/services.html">
   <meta property="og:title" content="Lawn Care & Fall Cleanup Services Near Hatfield, PA">
   <meta property="og:description" content="Explore leaf removal, gutter cleaning, lawn mowing, mulch and seasonal yard maintenance in Hatfield, Lansdale, Telford and Harleysville, Pennsylvania.">
@@ -36,127 +36,74 @@
   </header>
 
   <main class="page-main">
-
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow service-eyebrow">Services</div>
-        <h1>Our Services</h1>
-        <p>
-          Lawn care, exterior maintenance and seasonal work with a focus
-          on clean results, detail and professional presentation.
-        </p>
-      </div>
-    </section>
-
-    <section class="section services-showcase">
-      <div class="container">
-        <div class="services-showcase__header">
-          <h2>Complete Lawn Care Services</h2>
-          <p>Residential • Commercial • Seasonal</p>
-        </div>
-
-        <div class="services-photos">
-          <figure class="services-photo-card">
-            <img src="./Images/services/truck1.jpg" alt="Ariana's Lawn Care truck">
-          </figure>
-
-          <figure class="services-photo-card">
-            <img src="./Images/services/truck2.jpg" alt="Ariana's Lawn Care trailer and truck">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services-main">
-      <div class="container">
-
-        <div class="services-grid">
-          <article class="info-card">
-            <h3>Lawn Mowing</h3>
-            <p>Recurring or one-time service. We mow, blow and leave the area clean with a professional finish.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Edging & Trimming</h3>
-            <p>Clean edges along sidewalks, driveways and beds. Detail trimming for a sharper and more polished look.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Mulch</h3>
-            <p>Mulch installation for beds and borders. Improves curb appeal and helps keep the property looking fresh and clean.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Leaf Cleanup</h3>
-            <p>Leaf cleanup for yards, beds, borders and green areas. Collection, removal and a clean final presentation.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Hedge Trimming</h3>
-            <p>Trimming shrubs and hedges to maintain a uniform, clean and professional look around the property.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Gutter Cleaning</h3>
-            <p>Gutter cleaning to remove leaves and buildup that can affect drainage and the exterior appearance of the home.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Roof Cleaning / Wash</h3>
-            <p>Exterior roof cleaning to improve visual appearance and support the overall maintenance of the property.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Snow Removal</h3>
-            <p>Winter snow removal for driveways, walkways and main access areas, depending on the season and customer needs.</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Salting</h3>
-            <p>Salt application on walkways and traffic areas to help with ice and improve safety during cold weather.</p>
-          </article>
-        </div>
-
-        <div class="services-bottom-panels">
-          <div class="split">
-            <div class="panel">
-              <h2>Residential & Commercial Service</h2>
-              <p>We serve homes, rental properties, businesses and more with a focus on punctuality, clean work and professional presentation.</p>
-            </div>
-
-            <div class="panel">
-              <h2>Seasonal Work</h2>
-              <p>We also offer seasonal services such as spring cleanup, fall leaf removal and winter snow care based on each customer's needs.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn primary" href="./quote.html">Get a Quote</a>
-          <a class="btn secondary" href="./work.html">View Work</a>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section services-final-cta">
-      <div class="container">
-        <div class="panel services-final-box">
-          <h2>Need professional lawn care?</h2>
-          <p>
-            Contact Ariana's Lawn Care today for a free estimate and let us help
-            keep your property clean, maintained and looking its best.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="./quote.html">Get Free Estimate</a>
-            <a class="btn secondary" href="./contact.html">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+<section class="compact-intro"><div class="container"><div class="eyebrow">Choose your service</div><h1>A little care.<br>A whole new feeling.</h1><p>Lawn care and seasonal maintenance in Hatfield, Lansdale, Telford &amp; Harleysville.</p></div></section>
+<section class="section service-explorer"><div class="container">
+<div class="filter-bar" role="group" aria-label="Filter services" id="serviceFilters" hidden>
+<button type="button" data-filter="fall" aria-pressed="true">Fall favorites</button>
+<button type="button" data-filter="lawn" aria-pressed="false">Lawn &amp; garden</button>
+<button type="button" data-filter="exterior" aria-pressed="false">Exterior care</button>
+<button type="button" data-filter="winter" aria-pressed="false">Winter</button>
+<button type="button" data-filter="all" aria-pressed="false">All services</button>
+</div>
+<p id="serviceCount" class="results-count" role="status"></p>
+<div class="service-catalog"><article class="service-tile" data-service-category="fall">
+<div class="service-photo"><img src="./Images/work/autumn-06.jpg" alt="Leaf removal" loading="lazy" decoding="async"><span>Seasonal illustration</span></div>
+<div class="service-tile-body"><h2>Leaf removal</h2><p>Clear leaves from lawns, paths and beds.</p>
+<details><summary>What to include in your request</summary><p>Tell us where leaves collect and whether the coverage is light or heavy.</p></details>
+<a class="btn primary" href="./quote.html?service=Leaf%20removal">Request leaf removal →</a></div></article>
+<article class="service-tile" data-service-category="fall">
+<div class="service-photo"><img src="./Images/work/autumn-04.jpg" alt="Fall yard cleanup" loading="lazy" decoding="async"><span>Seasonal illustration</span></div>
+<div class="service-tile-body"><h2>Fall yard cleanup</h2><p>A fresh start for your outdoor spaces.</p>
+<details><summary>What to include in your request</summary><p>Describe leaves, fallen branches and the areas that need a seasonal cleanup.</p></details>
+<a class="btn primary" href="./quote.html?service=Fall%20yard%20cleanup">Request fall yard cleanup →</a></div></article>
+<article class="service-tile" data-service-category="fall exterior">
+<div class="service-marker" aria-hidden="true"><span>03</span><small>FALL CARE</small></div>
+<div class="service-tile-body"><h2>Gutter cleaning</h2><p>Keep leaf buildup out of your gutters.</p>
+<details><summary>What to include in your request</summary><p>Include the number of stories and any access restrictions so we can discuss the job.</p></details>
+<a class="btn primary" href="./quote.html?service=Gutter%20cleaning">Request gutter cleaning →</a></div></article>
+<article class="service-tile" data-service-category="lawn">
+<div class="service-photo"><img src="./Images/work/job1.jpg" alt="Lawn mowing" loading="lazy" decoding="async"><span>Our work</span></div>
+<div class="service-tile-body"><h2>Lawn mowing</h2><p>An even cut and a tidy finish.</p>
+<details><summary>What to include in your request</summary><p>Let us know whether you need a one-time visit or recurring lawn care.</p></details>
+<a class="btn primary" href="./quote.html?service=Lawn%20mowing">Request lawn mowing →</a></div></article>
+<article class="service-tile" data-service-category="lawn">
+<div class="service-photo"><img src="./Images/work/job3.jpg" alt="Edging & trimming" loading="lazy" decoding="async"><span>Our work</span></div>
+<div class="service-tile-body"><h2>Edging & trimming</h2><p>Give walkways and lawn borders definition.</p>
+<details><summary>What to include in your request</summary><p>Point out sidewalks, driveways and planting beds that need attention.</p></details>
+<a class="btn primary" href="./quote.html?service=Edging%20%26%20trimming">Request edging & trimming →</a></div></article>
+<article class="service-tile" data-service-category="lawn">
+<div class="service-photo"><img src="./Images/work/job2.jpg" alt="Mulch" loading="lazy" decoding="async"><span>Our work</span></div>
+<div class="service-tile-body"><h2>Mulch</h2><p>Refresh planting beds and garden borders.</p>
+<details><summary>What to include in your request</summary><p>Tell us which beds need mulch and whether edging is also needed.</p></details>
+<a class="btn primary" href="./quote.html?service=Mulch%20and%20edging">Request mulch →</a></div></article>
+<article class="service-tile" data-service-category="lawn exterior">
+<div class="service-marker" aria-hidden="true"><span>07</span><small>LAWN CARE</small></div>
+<div class="service-tile-body"><h2>Hedge trimming</h2><p>Shape shrubs and tidy overgrowth.</p>
+<details><summary>What to include in your request</summary><p>Describe the shrubs, their approximate height and any difficult access.</p></details>
+<a class="btn primary" href="./quote.html?service=Hedge%20trimming">Request hedge trimming →</a></div></article>
+<article class="service-tile" data-service-category="exterior">
+<div class="service-photo"><img src="./Images/work/job4.jpg" alt="Hardscape" loading="lazy" decoding="async"><span>Our work</span></div>
+<div class="service-tile-body"><h2>Hardscape</h2><p>Bring structure to your outdoor space.</p>
+<details><summary>What to include in your request</summary><p>Tell us about the wall, border or hardscape project you have in mind.</p></details>
+<a class="btn primary" href="./quote.html?service=Hardscape">Request hardscape →</a></div></article>
+<article class="service-tile" data-service-category="exterior">
+<div class="service-marker" aria-hidden="true"><span>09</span><small>EXTERIOR CARE</small></div>
+<div class="service-tile-body"><h2>Roof cleaning / wash</h2><p>Care for your property's exterior.</p>
+<details><summary>What to include in your request</summary><p>Describe the roof, the buildup and the areas you want assessed.</p></details>
+<a class="btn primary" href="./quote.html?service=Roof%20cleaning%20%2F%20wash">Request roof cleaning / wash →</a></div></article>
+<article class="service-tile" data-service-category="winter">
+<div class="service-marker" aria-hidden="true"><span>10</span><small>WINTER CARE</small></div>
+<div class="service-tile-body"><h2>Snow removal</h2><p>Prepare driveways and walkways for winter.</p>
+<details><summary>What to include in your request</summary><p>Availability depends on location and conditions. Tell us which access areas need clearing.</p></details>
+<a class="btn primary" href="./quote.html?service=Snow%20removal">Request snow removal →</a></div></article>
+<article class="service-tile" data-service-category="winter">
+<div class="service-marker" aria-hidden="true"><span>11</span><small>WINTER CARE</small></div>
+<div class="service-tile-body"><h2>Salting</h2><p>Help manage ice on outdoor walking areas.</p>
+<details><summary>What to include in your request</summary><p>Describe the walkways or access areas and ask about seasonal availability.</p></details>
+<a class="btn primary" href="./quote.html?service=Salting">Request salting →</a></div></article></div>
+</div></section>
+<section class="section"><div class="container reassurance-strip"><div><span class="eyebrow">Not sure where to start?</span><h2>Tell us what your yard needs.</h2><p>We’ll discuss the work and availability before you book.</p></div><a class="btn primary" href="./quote.html">Build a quote request</a><a class="btn secondary" href="tel:+12679922317">Call us</a></div></section>
+</main>
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -164,7 +111,18 @@
       <a href="./quote.html">Get a Quote</a>
     </div>
     <div class="container footer-local">Serving Hatfield, Lansdale, Telford &amp; Harleysville, PA · <a href="tel:+12679922317">(267) 992-2317</a> · <a href="./index.html#fall-services">Fall services</a></div>
-</footer>
+<div class="container footer-local"><details class="footer-areas"><summary>All service areas &amp; surroundings</summary><div class="area-links"><a href="./quote.html?city=Telford">Telford, PA</a>
+<a href="./quote.html?city=Lansdale">Lansdale, PA</a>
+<a href="./quote.html?city=Woxall">Woxall, PA</a>
+<a href="./quote.html?city=Hatfield">Hatfield, PA</a>
+<a href="./quote.html?city=Mainland">Mainland, PA</a>
+<a href="./quote.html?city=Earlington">Earlington, PA</a>
+<a href="./quote.html?city=Green%20Lane">Green Lane, PA</a>
+<a href="./quote.html?city=Sumneytown">Sumneytown, PA</a>
+<a href="./quote.html?city=Harleysville">Harleysville, PA</a>
+<a href="./quote.html?city=Salfordville">Salfordville, PA</a>
+<a href="./quote.html?city=Marlboroughville">Marlboroughville, PA</a>
+<a href="./quote.html?city=Yorkshire%20Commons">Yorkshire Commons, PA</a></div><p>Serving these Pennsylvania communities and surrounding areas.</p></details></div></footer>
 
   <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
@@ -173,8 +131,9 @@
     </svg>
   </a>
 
-  <script src="./quote-rules.js?v=20260909"></script>
-  <script src="./script.js?v=20260909"></script>
+  <script src="./quote-rules.js?v=20260909-ui2"></script>
+  <script src="./script.js?v=20260909-ui2"></script>
 </body>
 </html>
+
 

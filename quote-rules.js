@@ -1,8 +1,8 @@
 /* Shared validation; no customer information is stored in the browser. */
 (function (root) {
   "use strict";
-  const services = ["Leaf removal", "Fall yard cleanup", "Gutter cleaning", "Lawn mowing", "Mulch and edging", "Hedge trimming", "Hardscape", "Snow removal", "Other"];
-  const towns = ["Hatfield", "Lansdale", "Telford", "Harleysville"];
+  const services = ["Leaf removal", "Fall yard cleanup", "Gutter cleaning", "Lawn mowing", "Mulch and edging", "Hedge trimming", "Hardscape", "Snow removal", "Edging & trimming", "Roof cleaning / wash", "Salting", "Other"];
+  const towns = ["Telford","Lansdale","Woxall","Hatfield","Mainland","Earlington","Green Lane","Sumneytown","Harleysville","Salfordville","Marlboroughville","Yorkshire Commons"];
   const clean = value => String(value || "").trim().replace(/\s+/g, " ");
   function phoneValid(value) {
     const digits = String(value || "").replace(/\D/g, "");
@@ -26,4 +26,5 @@
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.QuoteRules = api;
 })(typeof window !== "undefined" ? window : this);
+
 

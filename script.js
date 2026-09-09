@@ -122,3 +122,89 @@
   updateAddress();
 })();
 
+
+/* Progressive enhancement: links, details and form work without these controls. */
+(() => {
+  "use strict";
+  function filters(id, items, category, initial, countId, noun) {
+    const bar = document.getElementById(id);
+    if (!bar) return;
+    const buttons = [...bar.querySelectorAll("[data-filter]")];
+    function select(value) {
+      buttons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === value)));
+      items.forEach(item => { item.hidden = value !== "all" && !category(item).split(" ").includes(value); });
+      const count = document.getElementById(countId);
+      if (count) {
+        const visible = items.filter(item => !item.hidden);
+        const total = id === "galleryFilters" ? visible.reduce((sum, item) => sum + item.querySelectorAll(".gallery-open").length, 0) : visible.length;
+        count.textContent = total + " " + noun + " shown";
+      }
+    }
+    bar.hidden = false;
+    buttons.forEach(button => button.addEventListener("click", () => select(button.dataset.filter)));
+    select(initial);
+  }
+  filters("serviceFilters", [...document.querySelectorAll("[data-service-category]")], el => el.dataset.serviceCategory, "fall", "serviceCount", "services");
+  filters("galleryFilters", [...document.querySelectorAll("[data-gallery-group]")], el => el.dataset.galleryGroup, "all", "galleryCount", "photos");
+  const choices = document.getElementById("contactChoices");
+  if (choices) {
+    choices.hidden = false;
+    const select = value => {
+      choices.querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.contact === value)));
+      document.querySelectorAll("[data-contact-panel]").forEach(panel => { panel.hidden = panel.dataset.contactPanel !== value; });
+    };
+    choices.querySelectorAll("button").forEach(button => button.addEventListener("click", () => select(button.dataset.contact)));
+    select("quote");
+    document.querySelectorAll("[data-town]").forEach(link => {
+      link.setAttribute("role", "button");
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        document.querySelectorAll("[data-town]").forEach(other => other.setAttribute("aria-pressed", String(other === link)));
+        document.getElementById("localQuoteLink").href = link.href;
+        document.getElementById("townStatus").textContent = "Selected: " + link.dataset.town + ", PA. Continue to add your full property address.";
+      });
+      link.addEventListener("keydown", event => { if (event.key === " ") { event.preventDefault(); link.click(); } });
+    });
+  }
+  const dialog = document.getElementById("galleryDialog");
+  if (dialog && typeof dialog.showModal === "function") {
+    const links = [...document.querySelectorAll(".gallery-open")];
+    let current = 0, active = [], opener = null;
+    function show(index) {
+      current = (index + active.length) % active.length;
+      const photo = document.getElementById("expandedPhoto");
+      photo.src = active[current].href;
+      photo.alt = active[current].dataset.caption;
+      document.getElementById("photoCaption").textContent = photo.alt;
+      document.getElementById("photoPosition").textContent = (current + 1) + " / " + active.length;
+    }
+    links.forEach(link => link.addEventListener("click", event => {
+      event.preventDefault();
+      active = links.filter(item => !item.closest("[data-gallery-group]").hidden);
+      opener = link;
+      show(active.indexOf(link));
+      dialog.showModal();
+    }));
+    document.getElementById("closePhoto").addEventListener("click", () => dialog.close());
+    document.getElementById("previousPhoto").addEventListener("click", () => show(current - 1));
+    document.getElementById("nextPhoto").addEventListener("click", () => show(current + 1));
+    dialog.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); show(current + (event.key === "ArrowLeft" ? -1 : 1)); }
+    });
+    dialog.addEventListener("close", () => { if (opener) opener.focus(); });
+  }
+  const form = document.getElementById("quoteForm"), progress = document.getElementById("quoteProgress");
+  if (form && progress) {
+    progress.hidden = false;
+    const update = () => {
+      const groups = [...form.querySelectorAll("fieldset")];
+      progress.textContent = groups.map((group, index) => {
+        const fields = [...group.querySelectorAll("[required]")];
+        const complete = fields.filter(field => field.type === "checkbox" ? field.checked : field.value.trim() && field.validity.valid).length;
+        return ["Contact", "Address", "Job"][index] + " " + complete + "/" + fields.length;
+      }).join("  ·  ");
+    };
+    form.addEventListener("input", update); form.addEventListener("change", update); window.addEventListener("pageshow", update); update();
+  }
+})();
+

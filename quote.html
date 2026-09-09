@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care</title>
   <meta name="description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
-  <link rel="stylesheet" href="./style.css?v=20260909" />
+  <link rel="stylesheet" href="./style.css?v=20260909-ui2" />
   <link rel="canonical" href="https://arianaslawncare.com/quote.html">
   <meta property="og:title" content="Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care">
   <meta property="og:description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
@@ -54,7 +54,7 @@
 
           <div class="fact-card">
             <strong>Service Area</strong>
-            <span>Hatfield, Lansdale and nearby areas</span>
+            <span>12 local communities and surrounding areas</span>
           </div>
 
           <div class="fact-card">
@@ -83,6 +83,7 @@
             <input type="hidden" name="Map link" id="mapLink">
             <input type="hidden" name="Country" value="United States">
             <input type="text" name="_honey" class="spam-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div id="quoteProgress" class="quote-progress" role="status" aria-live="polite" hidden></div>
             <p class="form-hint">Fields marked * are required. Enter the property address where you need service.</p>
             <fieldset>
               <legend>1. Your contact details</legend>
@@ -105,7 +106,7 @@
                 <div>
                   <label for="city">City / town *</label>
                   <input id="city" name="City" autocomplete="address-level2" list="localTowns" minlength="2" maxlength="80" required>
-                  <datalist id="localTowns"><option value="Hatfield"></option><option value="Lansdale"></option><option value="Telford"></option><option value="Harleysville"></option></datalist>
+                  <datalist id="localTowns"><option value="Telford"></option><option value="Lansdale"></option><option value="Woxall"></option><option value="Hatfield"></option><option value="Mainland"></option><option value="Earlington"></option><option value="Green Lane"></option><option value="Sumneytown"></option><option value="Harleysville"></option><option value="Salfordville"></option><option value="Marlboroughville"></option><option value="Yorkshire Commons"></option></datalist><small>Nearby communities welcome. Enter your property's postal city and ZIP code.</small>
                 </div>
                 <div>
                   <label for="state">State *</label>
@@ -126,7 +127,7 @@
                 <option value="">Choose a service</option>
                 <option>Leaf removal</option><option>Fall yard cleanup</option><option>Gutter cleaning</option>
                 <option>Lawn mowing</option><option>Mulch and edging</option><option>Hedge trimming</option>
-                <option>Hardscape</option><option>Snow removal</option><option>Other</option>
+                <option>Hardscape</option><option>Snow removal</option><option>Edging &amp; trimming</option><option>Roof cleaning / wash</option><option>Salting</option><option>Other</option>
               </select>
               <label for="timing">When would you like service? *</label>
               <select id="timing" name="Preferred timing" required>
@@ -159,7 +160,18 @@
       <a href="./quote.html">Get a Quote</a>
     </div>
     <div class="container footer-local">Serving Hatfield, Lansdale, Telford &amp; Harleysville, PA · <a href="tel:+12679922317">(267) 992-2317</a> · <a href="./index.html#fall-services">Fall services</a></div>
-</footer>
+<div class="container footer-local"><details class="footer-areas"><summary>All service areas &amp; surroundings</summary><div class="area-links"><a href="./quote.html?city=Telford">Telford, PA</a>
+<a href="./quote.html?city=Lansdale">Lansdale, PA</a>
+<a href="./quote.html?city=Woxall">Woxall, PA</a>
+<a href="./quote.html?city=Hatfield">Hatfield, PA</a>
+<a href="./quote.html?city=Mainland">Mainland, PA</a>
+<a href="./quote.html?city=Earlington">Earlington, PA</a>
+<a href="./quote.html?city=Green%20Lane">Green Lane, PA</a>
+<a href="./quote.html?city=Sumneytown">Sumneytown, PA</a>
+<a href="./quote.html?city=Harleysville">Harleysville, PA</a>
+<a href="./quote.html?city=Salfordville">Salfordville, PA</a>
+<a href="./quote.html?city=Marlboroughville">Marlboroughville, PA</a>
+<a href="./quote.html?city=Yorkshire%20Commons">Yorkshire Commons, PA</a></div><p>Serving these Pennsylvania communities and surrounding areas.</p></details></div></footer>
 
   <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
@@ -168,8 +180,9 @@
     </svg>
   </a>
 
-  <script src="./quote-rules.js?v=20260909"></script>
-  <script src="./script.js?v=20260909"></script>
+  <script src="./quote-rules.js?v=20260909-ui2"></script>
+  <script src="./script.js?v=20260909-ui2"></script>
 </body>
 </html>
+
 
