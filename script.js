@@ -41,7 +41,7 @@
     update();
   }
   const form = document.getElementById("quoteForm");
-  if (!form || !window.QuoteRules) return;
+  if (!form || !window.QuoteRules || form.dataset.guided === "true") return;
   const rules = window.QuoteRules;
   const byId = id => document.getElementById(id);
   const button = byId("sendQuote");
@@ -180,7 +180,7 @@
     }
     links.forEach(link => link.addEventListener("click", event => {
       event.preventDefault();
-      active = links.filter(item => !item.closest("[data-gallery-group]").hidden);
+      active = links.filter(item => !item.closest("[data-gallery-group]").hidden && !item.closest(".work-card").hidden);
       opener = link;
       show(active.indexOf(link));
       dialog.showModal();
@@ -194,7 +194,7 @@
     dialog.addEventListener("close", () => { if (opener) opener.focus(); });
   }
   const form = document.getElementById("quoteForm"), progress = document.getElementById("quoteProgress");
-  if (form && progress) {
+  if (form && progress && form.dataset.guided !== "true") {
     progress.hidden = false;
     const update = () => {
       const groups = [...form.querySelectorAll("fieldset")];

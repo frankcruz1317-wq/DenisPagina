@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care</title>
   <meta name="description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
-  <link rel="stylesheet" href="./style.css?v=20260909-season" />
+  <link rel="stylesheet" href="./style.css?v=20260909-local" />
   <link rel="canonical" href="https://arianaslawncare.com/quote.html">
   <meta property="og:title" content="Request a Lawn Care Quote in Hatfield, PA | Ariana’s Lawn Care">
   <meta property="og:description" content="Request leaf removal, yard cleanup or lawn care in Hatfield, Lansdale, Telford and Harleysville. Send your complete property address for a personalized quote.">
   <meta property="og:url" content="https://arianaslawncare.com/quote.html">
   <meta property="og:type" content="website">
 <meta name="theme-color" content="#192b24">
-<link rel="stylesheet" href="./experience.css?v=20260909-season">
-<link rel="stylesheet" href="./seasons.css?v=20260909-season">
-<script src="./seasons.js?v=20260909-season"></script>
-<noscript><style>@media(max-width:980px){.nav-menu{display:flex;position:static;flex-wrap:wrap;box-shadow:none}.nav-inner{flex-wrap:wrap}.menu-toggle{display:none}.navbar{position:relative}}</style></noscript></head>
+<link rel="stylesheet" href="./experience.css?v=20260909-local">
+<link rel="stylesheet" href="./seasons.css?v=20260909-local">
+<script src="./seasons.js?v=20260909-local"></script>
+<noscript><style>@media(max-width:980px){.nav-menu{display:flex;position:static;flex-wrap:wrap;box-shadow:none}.nav-inner{flex-wrap:wrap}.menu-toggle{display:none}.navbar{position:relative}}</style></noscript><link rel="stylesheet" href="./local-upgrade.css?v=20260909-local">
+</head>
 <body class="page-quote">
 <a class="skip-link" href="#main-content">Skip to content</a><div class="site-topbar"><div class="container"><span>Property care in Pennsylvania</span><a href="tel:+12679922317">Let’s talk · (267) 992-2317</a></div></div>
 
@@ -54,7 +55,7 @@
         <div class="stack">
           <div class="fact-card">
             <strong>Hours</strong>
-            <span>Mon–Sat • 7AM–6PM</span>
+            <span>Mon–Sun • 8AM–8PM</span>
           </div>
 
           <div class="fact-card">
@@ -76,10 +77,10 @@
         </div>
 
         <aside class="quote-card">
-          <h3>Quote Form</h3>
+          <h2>Let’s plan your property care.</h2>
           <p>Tell us what you need and exactly where the work will take place.</p>
 
-          <form id="quoteForm" action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST">
+          <form id="quoteForm" action="https://formsubmit.co/hardscapeandco@gmail.com" method="POST" enctype="multipart/form-data" data-guided="true">
             <input type="hidden" name="_subject" value="Complete Quote Request - Ariana's Lawn Care">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_autoresponse" value="Thank you for contacting Ariana&#39;s Lawn Care! We&#39;ve received your quote request. A member of our team will contact you as soon as possible. This message confirms your request, not a scheduled appointment. If you need to reach us, call (267) 992-2317.">
@@ -89,7 +90,7 @@
             <input type="hidden" name="Country" value="United States">
             <input type="text" name="_honey" class="spam-field" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div id="quoteProgress" class="quote-progress" role="status" aria-live="polite" hidden></div>
-            <p class="form-hint">Fields marked * are required. Enter the property address where you need service.</p>
+            <div id="wizardNav" class="wizard-nav" role="group" aria-label="Quote steps" hidden></div><p class="form-hint">Fields marked * are required. Enter the property address where you need service.</p>
             <fieldset>
               <legend>1. Your contact details</legend>
               <label for="customerName">Full name *</label>
@@ -139,11 +140,12 @@
                 <option value="">Choose timing</option><option>As soon as available</option>
                 <option>Within 1–2 weeks</option><option>Within a month</option><option>Flexible</option>
               </select>
-              <label for="jobDetails">Job details *</label>
+              <label for="propertySize">Approximate property size *</label><select id="propertySize" name="Approximate property size" required><option value="">Choose a size</option><option>Small yard (under 1/4 acre)</option><option>Medium yard (1/4 to 1/2 acre)</option><option>Large yard (over 1/2 acre)</option><option>Commercial property</option><option>Not sure — please assess</option></select><label for="serviceFrequency">Service frequency *</label><select id="serviceFrequency" name="Service frequency" required><option value="">Choose frequency</option><option>One-time service</option><option>Recurring maintenance</option><option>Help me decide</option></select>
+<details class="photo-upload"><summary>Add property photos (optional)</summary><p>Show the areas that need attention. Up to 3 JPG, PNG or WebP photos, 8 MB total. Photos are sent with your request. Avoid people, license plates and private documents.</p><label for="photo1">Property photo 1</label><input id="photo1" type="file" name="attachment" accept="image/jpeg,image/png,image/webp"><label for="photo2">Property photo 2</label><input id="photo2" type="file" name="attachment2" accept="image/jpeg,image/png,image/webp"><label for="photo3">Property photo 3</label><input id="photo3" type="file" name="attachment3" accept="image/jpeg,image/png,image/webp"><p id="photoStatus" role="status"></p></details><label for="jobDetails">Job details *</label>
               <textarea id="jobDetails" name="Job details" rows="4" minlength="15" maxlength="2000" required placeholder="Tell us which areas need work, how many leaves have fallen, and any gate or access instructions."></textarea>
               <label class="check-row"><input id="addressConfirmed" name="Address confirmed" type="checkbox" value="Yes" required> <span>I checked the house number, street, unit (if applicable), city, state and ZIP code. *</span></label>
             </fieldset>
-            <p class="form-hint">Your contact and property details are sent through FormSubmit to Ariana's Lawn Care to respond to this request. This is a quote request, not a confirmed appointment.</p>
+            
             <div id="quoteReview" class="quote-review" hidden tabindex="-1" aria-labelledby="reviewTitle">
               <h3 id="reviewTitle">Review your request</h3>
               <dl id="reviewDetails"></dl>
@@ -151,15 +153,15 @@
               <button class="btn secondary" type="button" id="editQuote">Edit details</button>
             </div>
             <p id="formNote" class="form-note" role="status" aria-live="polite"></p>
-            <button class="btn primary full" id="sendQuote" type="submit">Send quote request</button>
+            <button class="btn wizard-back" id="wizardBack" type="button" hidden>← Back</button><button class="btn primary full" id="sendQuote" type="submit">Send quote request</button>
             <noscript><p>Check all your details before sending. You can submit this form without JavaScript.</p></noscript>
-          </form>
+          <p class="submission-privacy">Your contact details, service address and optional photos are sent through FormSubmit to Ariana’s Lawn Care to respond to this request. Submitting a request does not book an appointment.</p></form>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer class="footer editorial-footer"><div class="container"><div class="footer-invitation"><div><div class="eyebrow">Leave the yard work to us</div><h2>Your outdoors.<br>Our next project.</h2></div><a class="btn primary" href="./quote.html">Let’s get started ↗</a></div><div class="footer-columns"><div><a class="footer-brand" href="./">Ariana’s<span>LAWN CARE</span></a><p>Lawn care, landscape maintenance<br>and seasonal cleanups.<br>Residential &amp; commercial.</p></div><div><h3>Explore</h3><a href="./services.html">Services</a><a href="./work.html">Photo gallery</a><a href="./about.html">About us</a><a href="./contact.html">Contact</a></div><div><h3>Let’s talk</h3><a href="tel:+12679922317">(267) 992-2317</a><a href="mailto:hardscapeandco@gmail.com">hardscapeandco@gmail.com</a><p>Monday–Saturday<br>7 AM–6 PM</p></div></div><details class="footer-areas"><summary>Our 12 service areas &amp; surroundings</summary><div class="local-town-grid"><a href="./quote.html?city=Telford">Telford<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Lansdale">Lansdale<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Woxall">Woxall<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Hatfield">Hatfield<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Mainland">Mainland<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Earlington">Earlington<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Green%20Lane">Green Lane<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Sumneytown">Sumneytown<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Harleysville">Harleysville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Salfordville">Salfordville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Marlboroughville">Marlboroughville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Yorkshire%20Commons">Yorkshire Commons<span aria-hidden="true">↗</span></a></div></details><div class="footer-bottom"><p>© <span id="year"></span> Ariana’s Lawn Care</p><a href="#main-content">Back to top ↑</a></div></div></footer><nav class="mobile-contact" aria-label="Quick contact"><a href="tel:+12679922317">Call us</a><a href="./quote.html">Get a free estimate ↗</a></nav>
+  <footer class="footer editorial-footer"><div class="container"><div class="footer-invitation"><div><div class="eyebrow">Leave the yard work to us</div><h2>Your outdoors.<br>Our next project.</h2></div><a class="btn primary" href="./quote.html">Let’s get started ↗</a></div><div class="footer-columns"><div><a class="footer-brand" href="./">Ariana’s<span>LAWN CARE</span></a><p>Lawn care, landscape maintenance<br>and seasonal cleanups.<br>Residential &amp; commercial.</p></div><div><h3>Explore</h3><a href="./service-areas.html">Service areas</a><a href="./lansdale-lawn-care.html">Lawn care in Lansdale</a><a href="./services.html">Services</a><a href="./work.html">Photo gallery</a><a href="./about.html">About us</a><a href="./contact.html">Contact</a></div><div><h3>Let’s talk</h3><a href="https://www.google.com/maps?cid=7540364938997628904" target="_blank" rel="noopener noreferrer" data-google-reviews>Reviews on Google ↗</a><a href="tel:+12679922317">(267) 992-2317</a><a href="mailto:hardscapeandco@gmail.com">hardscapeandco@gmail.com</a><p>Monday–Sunday<br>8 AM–8 PM</p></div></div><details class="footer-areas"><summary>Our 12 service areas &amp; surroundings</summary><div class="local-town-grid"><a href="./quote.html?city=Telford">Telford<span aria-hidden="true">↗</span></a><a href="./lansdale-lawn-care.html">Lansdale<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Woxall">Woxall<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Hatfield">Hatfield<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Mainland">Mainland<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Earlington">Earlington<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Green%20Lane">Green Lane<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Sumneytown">Sumneytown<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Harleysville">Harleysville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Salfordville">Salfordville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Marlboroughville">Marlboroughville<span aria-hidden="true">↗</span></a><a href="./quote.html?city=Yorkshire%20Commons">Yorkshire Commons<span aria-hidden="true">↗</span></a></div></details><div class="footer-bottom"><p>© <span id="year"></span> Ariana’s Lawn Care</p><a href="#main-content">Back to top ↑</a></div></div></footer><nav class="mobile-contact" aria-label="Quick contact"><a href="tel:+12679922317">Call us</a><a href="./quote.html">Get a free estimate ↗</a></nav>
 
   <a class="whatsapp-float" href="https://wa.me/12679922317" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
@@ -168,11 +170,13 @@
     </svg>
   </a>
 
-  <script src="./quote-rules.js?v=20260909-season"></script>
-  <script src="./script.js?v=20260909-season"></script>
-<script src="./experience.js?v=20260909-season"></script>
-</body>
+  <script src="./quote-rules.js?v=20260909-local"></script>
+  <script src="./script.js?v=20260909-local"></script>
+<script src="./experience.js?v=20260909-local"></script>
+<script src="./local-upgrade.js?v=20260909-local"></script>
+<script src="./quote-wizard.js?v=20260909-local"></script></body>
 </html>
+
 
 
 
