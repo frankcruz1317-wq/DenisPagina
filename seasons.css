@@ -1,0 +1,35 @@
+/* Calendar seasons for Pennsylvania. Fall is the no-JavaScript fallback. */
+:root,[data-season="fall"]{
+ --ink:#362116;--season-ink-rgb:54,33,22;--paper:#fbf3e6;--muted:#715b4a;
+ --accent:#edaa52;--season-accent-hover:#f5bc72;--season-link:#955018;
+ --season-soft:#f0dfc5;--season-surface:#fffaf2;--season-light:#fff8ed;
+ --season-border:#bf9d79;--line:#e1c7a8;--season-dark-text:#ead6bb;
+ --bg-soft:#513423;
+}
+[data-season="winter"]{
+ --ink:#172e45;--season-ink-rgb:23,46,69;--paper:#f2f7fb;--muted:#526779;
+ --accent:#a2d9f2;--season-accent-hover:#c3eafa;--season-link:#276487;
+ --season-soft:#dfeaf2;--season-surface:#ffffff;--season-light:#f5fbff;
+ --season-border:#99b4c6;--line:#c7d9e5;--season-dark-text:#d3e5f0;
+ --bg-soft:#28465e;
+}
+[data-season="spring"]{
+ --ink:#203c2c;--season-ink-rgb:32,60,44;--paper:#f5f8ef;--muted:#596b54;
+ --accent:#c7de83;--season-accent-hover:#d9eaa4;--season-link:#48652b;
+ --season-soft:#e2ebd4;--season-surface:#fcfff7;--season-light:#f9fff0;
+ --season-border:#a5b88c;--line:#cfddbc;--season-dark-text:#e0ebd3;
+ --bg-soft:#355840;
+}
+[data-season="summer"]{
+ --ink:#133d3b;--season-ink-rgb:19,61,59;--paper:#fff9ed;--muted:#536d63;
+ --accent:#f2cf5b;--season-accent-hover:#f9df86;--season-link:#276c60;
+ --season-soft:#e6edd6;--season-surface:#fffdf5;--season-light:#fffbee;
+ --season-border:#a7b995;--line:#d6dfc4;--season-dark-text:#e3edd9;
+ --bg-soft:#245954;
+}
+:root{--bg:var(--ink);--panel:var(--bg-soft);--text:var(--season-light);--text-soft:var(--season-dark-text);--green:var(--accent);--white-green:var(--season-light)}
+/* Preserve strong contrast in navigation and button states across all palettes. */
+.nav-menu [data-nav-quote]{background:var(--ink);color:var(--season-light)}
+.nav-menu [data-nav-quote]:hover,.nav-menu [data-nav-quote].is-active{color:var(--accent)}
+.filter-bar button[aria-pressed="true"],.town-choice[aria-pressed="true"]{color:var(--season-light)}
+.filter-bar button[aria-pressed="true"]:hover,.town-choice[aria-pressed="true"]:hover{background:var(--bg-soft);color:var(--season-light)}
